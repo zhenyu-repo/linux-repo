@@ -1,0 +1,120 @@
+AddToDecor "metal" BorderStyle --  !NoInset HiddenHandles
+
+AddToDecor "metal" TitleStyle Active MultiPixmap \
+  Main Colorset 1 \
+  LeftOfText buttons/bimetal_barleft.xpm \
+  UnderText (stretched) buttons/bimetal_mid.xpm \
+  RightOfText buttons/bimetal_barright.xpm
+
+AddToDecor "metal" TitleStyle Inactive MultiPixmap \
+  Main Colorset 0 \
+  LeftOfText buttons/metal_barleft.xpm \
+  UnderText (stretched) buttons/metal_mid.xpm \
+  RightOfText buttons/metal_barright.xpm
+
+AddToDecor "metal" TitleStyle -- flat
+AddToDecor "metal" TitleStyle Centered
+AddToDecor "metal" TitleStyle Height  23
+
++ ButtonStyle Reset
++ ButtonStyle All Pixmap empty.xpm
++ ButtonStyle All -- raised
++ AddButtonStyle 1 Pixmap buttons/bimetal_menu.xpm
++ AddButtonStyle 2 Pixmap buttons/bimetal_max.xpm
++ AddButtonStyle 3 Pixmap buttons/bimetal_close.xpm
++ AddButtonStyle 4 Pixmap buttons/bimetal_min.xpm
+
+IconFont "-adobe-helvetica-medium-r-normal--10-100-75-75-p-56-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+*FvwmIconMan: 1 Font "-adobe-helvetica-medium-r-normal--10-100-75-75-p-56-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+
+Colorset 0 fg cornsilk, bg #888B90, Tint, VGradient 48 10  #29292B \
+                1 #555A60 \
+                1 #999CA1 \
+                1 #C3C1C2 \
+                1 #C5C9CA \
+                1 #9F9DA2 \
+                1 #565052 \
+                1 #423B35 \
+                1 #4A3D37 \
+                1 #67564E \
+                1 #240F0E \
+                1 #100B08
+
+Colorset 1 fg cornsilk, bg #9D8E85, Tint, VGradient 48 10  #352C1E \
+                1 #615A52 \
+                1 #A69C93 \
+                1 #CDC2B6 \
+                1 #CEC9BF \
+                1 #AA9B93 \
+                1 #615044 \
+                1 #4E3C27 \
+                1 #563D29 \
+                1 #735440 \
+                1 #321100 \
+                1 #180D00 
+
+Colorset 2 fg cornsilk, bg #888B90, Tint, YGradient 48 10 #29292B \
+                1 #555A60 \
+                1 #999CA1 \
+                1 #C3C1C2 \
+                1 #C5C9CA \
+                1 #9F9DA2 \
+                1 #565052 \
+                1 #423B35 \
+                1 #4A3D37 \
+                1 #67564E \
+                1 #240F0E \
+
+Colorset 3 fg cornsilk, bg #9D8E85, Tint, YGradient 48 10  #352C1E \
+                1 #615A52 \
+                1 #A69C93 \
+                1 #CDC2B6 \
+                1 #CEC9BF \
+                1 #AA9B93 \
+                1 #615044 \
+                1 #4E3C27 \
+                1 #563D29 \
+                1 #735440 \
+                1 #321100 \
+                1 #180D00 
+
+MenuStyle * MenuColorset
+MenuStyle * Foreground cornsilk, Background #9D8E85
+MenuStyle * BorderWidth 2
+MenuStyle * TrianglesSolid
+MenuStyle * Font "-adobe-helvetica-bold-r-normal--12-120-75-75-p-70-iso8859-1,-*-simsun-medium-r-normal-*-14-*-*-*-*-*-*-*"
+MenuStyle * SidePic
+MenuStyle * MenuFace \
+YGradient 128 10  #352C1E \
+                1 #615A52 \
+                1 #A69C93 \
+                1 #CDC2B6 \
+                1 #CEC9BF \
+                1 #AA9B93 \
+                1 #615044 \
+                1 #4E3C27 \
+                1 #563D29 \
+                1 #735440 \
+                1 #321100 \
+                1 #180D00
+
+Style * Colorset 0
+Style * HilightColorset 1
+Style * BorderWidth 4
+Style * HandleWidth 5
+Style * Font "-b&h-lucida-bold-r-normal-sans-18-180-75-75-p-120-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+Style * FvwmBorder
+
+Style * UseDecor metal
+
+Style * IconTitleColorset 2
+Style * HilightIconTitleColorset 3
+
+*FvwmPager: Colorset * 0
+*FvwmPager: HilightColorset * 1
+*FvwmTaskBar: StartIcon buttons/Ball_gold.xpm
+Style "FvwmTaskBar" Sticky, NoTitle, NoHandles, BorderWidth 4, HandleWidth 4, WindowListSkip
+Style "FvwmPager" Sticky, NoTitle, NoHandles, BorderWidth 2, HandleWidth 2, WindowListSkip
+
+Style MyStartMenu BorderWidth 0, HandleWidth 0
+Style NavButtons BorderWidth 0, HandleWidth 0

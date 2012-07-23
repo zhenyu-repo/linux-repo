@@ -1,0 +1,53 @@
+AddToDecor "wood" BorderStyle TiledPixmap buttons/wood.xpm
+AddToDecor "wood" BorderStyle -- HiddenHandles
+AddToDecor "wood" BorderStyle -- NoInset
+
+AddToDecor "wood" TitleStyle TiledPixmap buttons/wood.xpm -- raised
+AddToDecor "wood" TitleStyle -- flat
+AddToDecor "wood" TitleStyle Centered
+AddToDecor "wood" TitleStyle Height 25
+
++ ButtonStyle Reset
++ ButtonStyle All Pixmap empty.xpm
++ ButtonStyle All -- raised
++ ButtonStyle All -- UseTitleStyle
++ ButtonStyle All Inactive Pixmap buttons/blank_wood.xpm
++ AddButtonStyle 1 ActiveUp pixmap buttons/wood_menu.xpm
++ AddButtonStyle 2 ActiveUp pixmap buttons/wood_max.xpm
++ AddButtonStyle 3 ActiveUp pixmap buttons/Ball_gold.xpm
++ AddButtonStyle 4 ActiveUp pixmap buttons/wood_min.xpm
+
+IconFont "-adobe-helvetica-medium-r-normal--10-100-75-75-p-56-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+*FvwmIconMan: 1 Font "-adobe-helvetica-medium-r-normal--10-100-75-75-p-56-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+
+Colorset 0 fg wheat3, bg #9c6f51, TiledPixmap buttons/wood.xpm, Tint
+Colorset 1 fg wheat, bg #9c6f51, TiledPixmap buttons/wood.xpm, Tint
+
+MenuStyle * MenuColorset 1
+MenuStyle * BorderWidth 3
+MenuStyle * TrianglesSolid
+MenuStyle * Hilight3DThick
+MenuStyle * Font "-b&h-lucida-bold-r-normal-sans-12-120-75-75-p-79-iso8859-1,-*-simsun-medium-r-normal-*-14-*-*-*-*-*-*-*"
+MenuStyle * SeparatorsLong
+MenuStyle * SidePic
+
+Style * Colorset 0
+Style * HilightColorset 1
+Style * Font "-adobe-helvetica-bold-r-normal--18-180-75-75-p-103-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+Style * BorderWidth 8
+Style * HandleWidth 8
+Style * FvwmBorder
+
+Style * UseDecor wood 
+
+Style * IconTitleColorset 0
+Style * HilightIconTitleColorset 1
+Style * IconBackgroundColorset 0
+
+*FvwmPager: Colorset * 0
+*FvwmPager: HilightColorset * 1
+*FvwmTaskBar: StartIcon buttons/Ball_gold.xpm
+Style "FvwmTaskBar" Sticky, NoTitle, NoHandles, BorderWidth 3, HandleWidth 3, WindowListSkip
+Style "FvwmPager" Sticky, NoTitle, NoHandles, BorderWidth 2, HandleWidth 2, WindowListSkip
+Style MyStartMenu BorderWidth 0, HandleWidth 0
+Style NavButtons BorderWidth 0, HandleWidth 0

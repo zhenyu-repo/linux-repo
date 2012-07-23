@@ -1,0 +1,57 @@
+Colorset 0 fg #534d48, bg #aa998e, fgsh #e2d9d3, TiledPixmap buttons/marble-dark.xpm, Tint
+Colorset 1 fg #605650, bg #beada1, fgsh #f9f6f4, TiledPixmap buttons/marble-brown.xpm, Tint
+# Better contrast for menus
+Colorset 2 fg #433d38, bg #aa998e, fgsh #e2d9d3, TiledPixmap buttons/marble-brown.xpm, Tint
+
+AddToDecor "marble" BorderStyle Active   Colorset 1
+AddToDecor "marble" BorderStyle Inactive Colorset 0
+
+AddToDecor "marble" BorderStyle -- HiddenHandles
+AddToDecor "marble" BorderStyle -- NoInset
+AddToDecor "marble" TitleStyle Height 22
+AddToDecor "marble" TitleStyle Centered
+AddToDecor "marble" TitleStyle Active  Colorset 1
+AddToDecor "marble" TitleStyle Inactive Colorset 0
+AddToDecor "marble" TitleStyle Active -- raised
+AddToDecor "marble" TitleStyle Inactive -- sunk
+
++ ButtonStyle Reset
++ ButtonStyle All -- UseTitleStyle
++ ButtonStyle All -- raised
++ AddButtonStyle 1 Vector 5 \
+    20x20@0 80x20@0 80x40@1 20x40@1 20x20@1
++ AddButtonStyle 3 Pixmap buttons/pyramid.xpm
++ AddButtonStyle 2 Vector 9 \
+    20x80@0 20x20@0 80x20@0 80x80@1 65x80@1 65x35@0 35x35@1 35x80@1 20x80@1 
++ AddButtonStyle 4 Vector 5 \
+    25x75@1 45x75@1 45x55@1 25x55@0 25x75@0
+
+IconFont  "Shadow=1 0 SE:-adobe-helvetica-bold-r-normal--12-120-75-75-*-70-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+*FvwmIconMan: 1 Font "Shadow=1 0 SE:-adobe-helvetica-bold-r-normal--12-120-75-75-*-70-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+
+MenuStyle * MenuColorset 2
+MenuStyle * Font "Shadow=2 0 SE:-b&h-lucida-bold-r-normal-sans-14-140-75-75-*-92-iso8859-1,-*-simsun-medium-r-normal-*-14-*-*-*-*-*-*-*"
+MenuStyle * BorderWidth 3
+MenuStyle * TrianglesRelief
+MenuStyle * SidePic buttons/vert_marble.xpm
+
+Style * Colorset 0
+Style * HilightColorset 1
+Style * BorderWidth 4
+Style * HandleWidth 6
+Style * Font "Shadow=1 0 SE:-b&h-lucida-bold-r-normal-sans-14-*-*-*-*-*-iso8859-*,-*-simsun-medium-r-normal-*-14-*-*-*-*-*-*-*"
+Style * FvwmBorder
+
+Style * IconTitleColorset 0
+Style * HilightIconTitleColorset 1
+
+Style * UseDecor marble
+
+*FvwmPager: Colorset * 0
+*FvwmPager: HilightColorset * 1
+*FvwmTaskBar: StartIcon buttons/pyramid_taskbar.xpm
+Style "FvwmTaskBar" Sticky, NoTitle, NoHandles, BorderWidth 4, HandleWidth 4, WindowListSkip
+Style "FvwmPager" Sticky, NoTitle, NoHandles, BorderWidth 2, HandleWidth 2, WindowListSkip
+
+Style MyStartMenu BorderWidth 0, HandleWidth 0
+Style NavButtons BorderWidth 0, HandleWidth 0

@@ -1,0 +1,22 @@
+/* XPM */
+static char * menu_xpm[] = {
+"16 16 3 1",
+"o	c antiquewhite",
+".	c None",
+"X	c #000000000000",
+"oooooooooooooooo",
+"o..............X",
+"o..............X",
+"XXXXXXXXXXXXXXXX",
+"oooooooooooooooo",
+"o..............X",
+"o.XXXXXXXXXXXX.X",
+"o.X..........o.X",
+"o.X..........o.X",
+"o.X..........o.X",
+"o.X..........o.X",
+"o.X..........o.X",
+"o.X..........o.X",
+"o.oooooooooooo.X",
+"o..............X",
+"XXXXXXXXXXXXXXXX"};

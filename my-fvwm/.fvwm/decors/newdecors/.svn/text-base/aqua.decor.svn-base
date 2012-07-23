@@ -1,0 +1,66 @@
+Colorset 0 fg gray20, bg white, Pixmap buttons/AquaCorduroy.xpm, Tint
+Colorset 1 fg black, bg white, Pixmap, Tint
+
+AddToDecor "aqua" TitleStyle Inactive TiledPixmap buttons/AquaCorduroy.xpm
+AddToDecor "aqua" TitleStyle Active   TiledPixmap buttons/AquaCorduroy.xpm
+AddToDecor "aqua" BorderStyle -- Flat NoInset HiddenHandles
+
+AddToDecor "aqua" TitleStyle Centered
+AddToDecor "aqua" TitleStyle -- flat
+AddToDecor "aqua" TitleStyle Height 23
+
++ ButtonStyle Reset
++ ButtonStyle All Pixmap empty.xpm
++ ButtonStyle All -- UseTitleStyle
++ ButtonStyle All -- flat
++ AddButtonStyle 1 Inactive pixmap buttons/AquaGray.xpm
++ AddButtonStyle 1 ActiveUp pixmap buttons/AquaBlue.xpm
++ AddButtonStyle 1 ActiveDown pixmap buttons/AquaBlue.xpm
++ AddButtonStyle 4 Inactive pixmap buttons/AquaGreen.xpm
++ AddButtonStyle 4 ActiveUp pixmap buttons/AquaGreenX.xpm
++ AddButtonStyle 4 ActiveDown pixmap buttons/AquaGreenX.xpm
++ AddButtonStyle 2 Inactive pixmap buttons/AquaRed.xpm
++ AddButtonStyle 2 ActiveUp pixmap buttons/AquaRedX.xpm
++ AddButtonStyle 2 ActiveDown pixmap buttons/AquaRedX.xpm
++ AddButtonStyle 6 Inactive pixmap buttons/AquaYellow.xpm
++ AddButtonStyle 6 ActiveUp pixmap buttons/AquaYellowX.xpm
++ AddButtonStyle 6 ActiveDown pixmap buttons/AquaYellowX.xpm
+# In case they're mapped in Mac order
++ AddButtonStyle 5 Inactive pixmap buttons/AquaYellow.xpm
++ AddButtonStyle 5 ActiveUp pixmap buttons/AquaYellowX.xpm
++ AddButtonStyle 5 ActiveDown pixmap buttons/AquaYellowX.xpm
++ AddButtonStyle 7 Inactive pixmap buttons/AquaGreen.xpm
++ AddButtonStyle 7 ActiveUp pixmap buttons/AquaGreenX.xpm
++ AddButtonStyle 7 ActiveDown pixmap buttons/AquaGreenX.xpm
+#Mouse 1         3   A   Delete
+#Mouse 1         5   A   Iconify
+#Mouse 1         7   A   Maximize 0 100
+#Mouse 2         7   A   Maximize 100 0
+#Mouse 3         7   A   Maximize
+
+Style * UseDecor aqua
+IconFont "-adobe-helvetica-medium-r-normal--10-100-75-75-p-56-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+*FvwmIconMan: 1 Font "-adobe-helvetica-medium-r-*-*-*-100-*-*-*-*-*-*,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+
+
+#MenuStyle * MenuColorset 1
+MenuStyle * BorderWidth 2
+MenuStyle * TrianglesSolid
+MenuStyle * Font "-b&h-lucida-bold-r-normal-sans-12-120-75-75-p-79-iso8859-1,-*-simsun-medium-r-normal-*-14-*-*-*-*-*-*-*"
+MenuStyle * SidePic
+
+#Style * Colorset 0
+#Style * HilightColorset 1
+Style * Font "-adobe-helvetica-bold-r-normal--12-140-75-75-p-82-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+Style * BorderWidth 0
+Style * HandleWidth 2
+
+
+#*FvwmPager: Colorset * 0
+#*FvwmPager: HilightColorset * 1
+#*FvwmTaskBar: StartIcon buttons/AquaBlue.xpm
+#Style "FvwmTaskBar" Sticky, NoTitle, NoHandles, BorderWidth 0, HandleWidth 0, WindowListSkip
+Style FvwmPager BorderWidth 1, BackColor SteelBlue3
+
+Style MyStartMenu BorderWidth 0, HandleWidth 0
+Style NavButtons BorderWidth 0, HandleWidth 0

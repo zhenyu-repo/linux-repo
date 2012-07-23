@@ -1,0 +1,22 @@
+/* XPM */
+static char * max_blue_xpm[] = {
+"16 16 3 1",
+".	c antiquewhite",
+"X	c None",
+"o	c #000000000000",
+"................",
+".XXXXXXXXXXXXXXo",
+".XooooooooooooXo",
+".XoXXXXXXXXXX.Xo",
+".Xo.........X.Xo",
+".XXXXXXXXXXoX.Xo",
+".XooooooooXoX.Xo",
+".XoXXXXXX.XoX.Xo",
+".XoXXXXXX.XoX.Xo",
+".XoXXXXXX.XoX.Xo",
+".XoXXXXXX.XoX.Xo",
+".XoXXXXXX.XoX.Xo",
+".XoXXXXXX.XoX.Xo",
+".Xo.......Xo..Xo",
+".XXXXXXXXXXXXXXo",
+"oooooooooooooooo"};

@@ -1,0 +1,57 @@
+AddToDecor "redgold" BorderStyle -- !NoInset
+
+AddToDecor "redgold" TitleStyle Active MultiPixmap \
+    Main Colorset 1 \
+    LeftOfText buttons/goldfleur_r.xpm \
+    RightOfText buttons/goldfleur_l.xpm
+AddToDecor "redgold" TitleStyle Inactive MultiPixmap \
+    Main Colorset 0 \
+    LeftOfText buttons/goldfleur_r.xpm \
+    RightOfText buttons/goldfleur_l.xpm \
+
+AddToDecor "redgold" TitleStyle Centered
+AddToDecor "redgold" TitleStyle Height 23
+
++ ButtonStyle Reset
++ ButtonStyle All -- UseTitleStyle
++ ButtonStyle All -- raised
++ ButtonStyle All Inactive Colorset 0
++ ButtonStyle All Active Colorset 1
++ AddButtonStyle 1 Active pixmap buttons/gold_mwm_menu.xpm
++ AddButtonStyle 2 Active pixmap buttons/gold_mwm_max.xpm
++ AddButtonStyle 3 Active pixmap buttons/star.xpm
++ AddButtonStyle 4 Active pixmap buttons/gold_mwm_min.xpm
+
+IconFont "-adobe-helvetica-medium-r-normal--10-100-75-75-p-56-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+*FvwmIconMan: 1 Font "-adobe-helvetica-medium-r-normal--10-100-75-75-p-56-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+
+Colorset 0 fg black, bg #bf9d79, VGradient 24 #ad8153 #e5d8c8, Tint
+Colorset 1 fg #FFF3D9, bg #a23b3d, VGradient 24 #781d1c #d65f65, Tint
+
+MenuStyle * MenuColorset 1
+MenuStyle * BorderWidth 2
+MenuStyle * TrianglesRelief
+MenuStyle * Font "-adobe-helvetica-bold-r-normal--12-120-75-75-p-70-iso8859-1,-*-simsun-medium-r-normal-*-14-*-*-*-*-*-*-*"
+MenuStyle * SidePic
+
+Style * Colorset 0
+Style * HilightColorset 1
+Style * Font "-adobe-helvetica-bold-r-normal--14-140-75-75-p-82-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+Style * FvwmBorder
+Style * BorderWidth 4
+Style * HandleWidth 6
+
+Style * IconTitleColorset 0
+Style * HilightIconTitleColorset 1
+
+Style * UseDecor redgold
+
+*FvwmPager: Colorset * 0
+*FvwmPager: HilightColorset * 1
+*FvwmTaskBar: StartIcon buttons/goldfleur_down.xpm
+Style "FvwmTaskBar" Sticky, NoTitle, NoHandles, BorderWidth 3, HandleWidth 3, WindowListSkip
+Style "FvwmPager" Sticky, NoTitle, NoHandles, BorderWidth 3, HandleWidth 3, WindowListSkip
+#SendToModule FvwmButtons ChangeButton start Icon buttons/goldfleur_down.xpm
+
+Style MyStartMenu BorderWidth 0, HandleWidth 0
+Style NavButtons BorderWidth 0, HandleWidth 0

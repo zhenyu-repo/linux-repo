@@ -1,0 +1,63 @@
+AddToDecor "wing" BorderStyle Simple
+AddToDecor "wing" BorderStyle Active TiledPixmap   buttons/bronze.xpm
+AddToDecor "wing" BorderStyle Inactive TiledPixmap buttons/blue.xpm
+AddToDecor "wing" BorderStyle -- !NoInset
+AddToDecor "wing" BorderStyle -- HiddenHandles
+AddToDecor "wing" BorderStyle -- Sunk
+
+AddToDecor "wing" TitleStyle RightJustified
+AddToDecor "wing" TitleStyle Height 23
+
+AddToDecor "wing" TitleStyle Active MultiPixmap \
+    Main buttons/brushedblue.xpm \
+    LeftEnd buttons/leftbars.xpm
+
+AddToDecor "wing" TitleStyle Inactive MultiPixmap \
+    Main buttons/brusheddust.xpm \
+    LeftEnd buttons/leftbars.xpm
+
+AddToDecor "wing" TitleStyle ActiveUp -- flat
+AddToDecor "wing" TitleStyle ActiveDown -- raised
+AddToDecor "wing" TitleStyle Inactive -- flat
+
++ ButtonStyle Reset
++ ButtonStyle All Pixmap empty.xpm
++ ButtonStyle All -- flat UseTitleStyle
++ AddButtonStyle 1 pixmap buttons/outline_menu.xpm
++ AddButtonStyle 2 pixmap buttons/outline_max.xpm
++ AddButtonStyle 3 pixmap buttons/Ball_bronze.xpm
++ AddButtonStyle 4 pixmap buttons/outline_min.xpm
+
+IconFont "-adobe-helvetica-medium-r-normal--10-100-75-75-p-56-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+FvwmIconMan: 1 Font "-adobe-helvetica-medium-r-normal--10-100-75-75-p-56-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+
+Style * IconTitleColorset 0
+Style * HilightIconTitleColorset 1
+
+Colorset 0 fg #ffebd6, bg #8c897c, TiledPixmap buttons/brusheddust.xpm, Tint
+Colorset 1 fg #ffebd6, bg #425573, TiledPixmap buttons/brushedblue.xpm, Tint
+
+MenuStyle * MenuColorset 1
+MenuStyle * BorderWidth 2
+MenuStyle * TrianglesRelief
+MenuStyle * Font "-b&h-lucida-bold-r-normal-sans-12-120-75-75-p-79-iso8859-1,-*-simsun-medium-r-normal-*-13-*-*-*-*-*-*-*"
+MenuStyle * SidePic buttons/vertbars.xpm
+
+Style * Colorset 0
+Style * HilightColorset 1
+Style * BorderWidth 5
+Style * HandleWidth 6
+Style * Font "-b&h-lucida-bold-r-normal-sans-12-*-*-*-*-*-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+Style * FvwmBorder
+
+Style * UseDecor wing
+
+*FvwmPager: Colorset * 0
+*FvwmPager: HilightColorset * 1
+*FvwmTaskBar: StartIcon buttons/Ball_bronze.xpm
+
+Style "FvwmTaskBar" Sticky, NoTitle, NoHandles, BorderWidth 2, HandleWidth 2, WindowListSkip
+Style "FvwmPager" Sticky, NoTitle, NoHandles, BorderWidth 2, HandleWidth 2, WindowListSkip
+
+Style MyStartMenu BorderWidth 0, HandleWidth 0
+Style NavButtons BorderWidth 0, HandleWidth 0

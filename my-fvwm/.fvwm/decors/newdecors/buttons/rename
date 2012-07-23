@@ -1,0 +1,15 @@
+#!/bin/csh -f
+# Renames a list of files according to a pattern that you provide.
+
+foreach i ( $argv )
+    set new = `echo $i | sed 's/Blood/wine/g'`
+    # Keep from overwriting if the command failed
+    if ($status) exit
+
+    echo $i "=>" $new
+
+    # Do copy and rename in case you're on a different file system
+    # and can't do a move
+    cp $i $new
+    rm $i
+end

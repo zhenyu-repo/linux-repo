@@ -1,0 +1,58 @@
+AddToDecor "emerald" BorderStyle Simple
+AddToDecor "emerald" BorderStyle -- HiddenHandles NoInset
+
+AddToDecor "emerald" TitleStyle ActiveUp -- raised
+AddToDecor "emerald" TitleStyle ActiveDown -- sunk
+AddToDecor "emerald" TitleStyle Inactive -- raised
+AddToDecor "emerald" TitleStyle ActiveUp   Pixmap buttons/EosCobbleTriplet3.xpm
+AddToDecor "emerald" TitleStyle ActiveDown Pixmap buttons/EosCobbleTriplet3.xpm
+AddToDecor "emerald" TitleStyle Inactive   Pixmap buttons/EosCobbleBut3.xpm
+AddToDecor "emerald" TitleStyle RightJustified
+AddToDecor "emerald" TitleStyle Height 24
+
++ ButtonStyle Reset 
++ ButtonStyle All Pixmap empty.xpm
++ ButtonStyle 3 Pixmap buttons/Emerald.xpm
++ ButtonStyle All -- raised
++ AddButtonStyle 1 ActiveUp    pixmap buttons/Emerald_menu.xpm
++ AddButtonStyle 1 ActiveDown  pixmap buttons/Emerald_menu.xpm
++ AddButtonStyle 1 Inactive    pixmap buttons/EosCobbleBut3.xpm
++ AddButtonStyle 2 ActiveUp    pixmap buttons/Emerald_max.xpm
++ AddButtonStyle 2 ActiveDown  pixmap buttons/Emerald_max.xpm
++ AddButtonStyle 2 Inactive    pixmap buttons/EosCobbleBut3.xpm
++ AddButtonStyle 3 ActiveUp    pixmap buttons/gold_close.xpm
++ AddButtonStyle 3 ActiveDown  pixmap buttons/gold_close.xpm
++ AddButtonStyle 3 Inactive    pixmap buttons/Emerald.xpm
++ AddButtonStyle 4 ActiveUp    pixmap buttons/Emerald_min.xpm
++ AddButtonStyle 4 ActiveDown  pixmap buttons/Emerald_min.xpm
++ AddButtonStyle 4 Inactive    pixmap buttons/Emerald.xpm
+
+IconFont "-adobe-new century schoolbook-medium-r-normal--10-100-75-75-p-60-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+*FvwmIconMan: 1 Font "-adobe-new century schoolbook-medium-r-normal--10-100-75-75-p-60-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+
+Colorset 0 fg antiquewhite, bg #3e685a, Pixmap, Tint
+Colorset 1 fg antiquewhite, bg aquamarine4, Pixmap, Tint
+
+MenuStyle * MenuColorset 1
+MenuStyle * BorderWidth 2
+MenuStyle * TrianglesRelief
+MenuStyle * Font "-adobe-new century schoolbook-bold-r-normal--12-120-75-75-p-77-iso8859-1,-*-simsun-medium-r-normal-*-14-*-*-*-*-*-*-*"
+MenuStyle * MenuFace
+MenuStyle * SidePic buttons/EosCobbleVertTriplet3.xpm
+
+Style * Colorset 0
+Style * HilightColorset 1
+Style * BorderWidth 4
+Style * HandleWidth 6
+Style * Font "-adobe-new century schoolbook-bold-r-normal--18-180-75-75-p-113-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+Style * FvwmBorder
+
+Style * UseDecor emerald
+
+*FvwmPager: Colorset * 0
+*FvwmPager: HilightColorset * 1
+*FvwmTaskBar: StartIcon buttons/EosCobbleBut3.xpm
+Style "FvwmTaskBar" Sticky, NoTitle, NoHandles, BorderWidth 3, HandleWidth 3, WindowListSkip
+Style "FvwmPager" Sticky, NoTitle, NoHandles, BorderWidth 2, HandleWidth 2, WindowListSkip
+Style MyStartMenu BorderWidth 0, HandleWidth 0
+Style NavButtons BorderWidth 0, HandleWidth 0

@@ -1,0 +1,22 @@
+/* XPM */
+static char * mymin_xpm[] = {
+"16 16 3 1",
+".	c antiquewhite",
+"X	c #000000000000",
+"o	c None",
+"................",
+".ooooooooooooooX",
+".oXXXXXXXXXXXXoX",
+".oXoooooooooo.oX",
+".oXoooooooooo.oX",
+".oXoooooooooo.oX",
+".oXoooooooooo.oX",
+".oX.....Xoooo.oX",
+".oX.ooooXoooo.oX",
+".oX.ooooXoooo.oX",
+".oX.ooooXoooo.oX",
+".oX.ooooXoooo.oX",
+".oXXXXXXXoooo.oX",
+".o............oX",
+".ooooooooooooooX",
+"XXXXXXXXXXXXXXXX"};

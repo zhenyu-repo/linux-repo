@@ -1,0 +1,58 @@
+AddToDecor "bluegray" BorderStyle Simple
+AddToDecor "bluegray" BorderStyle Active TiledPixmap   buttons/bluegray-edge.xpm
+AddToDecor "bluegray" BorderStyle Inactive TiledPixmap buttons/bluegray-edge.xpm
+AddToDecor "bluegray" BorderStyle -- !NoInset
+AddToDecor "bluegray" BorderStyle -- HiddenHandles
+AddToDecor "bluegray" BorderStyle -- Raised
+
+#AddToDecor "bluegray" TitleStyle RightJustified
+AddToDecor "bluegray" TitleStyle Centered
+AddToDecor "bluegray" TitleStyle Height 21
+AddToDecor "bluegray" TitleStyle Active TiledPixmap buttons/bluegray-gimpressionist-cubism.xpm
+AddToDecor "bluegray" TitleStyle Inactive   TiledPixmap buttons/bluegray-gimpressionist-cubism-ud.xpm
+AddToDecor "bluegray" TitleStyle -- flat
+
++ ButtonStyle Reset
++ ButtonStyle All Pixmap empty.xpm
++ ButtonStyle All -- flat UseTitleStyle
++ AddButtonStyle 1 ActiveUp pixmap buttons/glass_square.xpm
++ AddButtonStyle 1 Inactive pixmap buttons/glassbrt_square.xpm
++ AddButtonStyle 2 ActiveUp pixmap buttons/glass_max.xpm
++ AddButtonStyle 2 Inactive pixmap buttons/glassbrt_max.xpm
++ AddButtonStyle 3 ActiveUp pixmap buttons/glass_close.xpm
++ AddButtonStyle 3 Inactive pixmap buttons/glassbrt_close.xpm
++ AddButtonStyle 4 ActiveUp pixmap buttons/glass_arrow.xpm
++ AddButtonStyle 4 Inactive pixmap buttons/glassbrt_arrow.xpm
+
+IconFont "-adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+*FvwmIconMan: 1 Font "-adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+
+Colorset 0 fg gray15, bg slategray, Pixmap buttons/bluegray-gimpressionist-cubism-ud.xpm, Tint
+Colorset 1 fg lightgray, bg #55667c, Pixmap buttons/bluegray-gimpressionist-cubism.xpm, Tint
+
+MenuStyle * MenuColorset 1
+MenuStyle * BorderWidth 2
+MenuStyle * TrianglesRelief
+MenuStyle * Font "-b&h-lucida-bold-i-normal-sans-14-140-75-75-p-92-iso8859-1,-*-simsun-medium-r-normal-*-14-*-*-*-*-*-*-*"
+MenuStyle * SidePic
+
+Style * Colorset 0
+Style * HilightColorset 1
+Style * BorderWidth 5
+Style * HandleWidth 6
+Style * Font "-b&h-lucida-bold-i-normal-sans-12-*-*-*-*-*-iso8859-*,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+Style * MwmBorder
+
+Style * IconTitleColorset 0
+Style * HilightIconTitleColorset 1
+
+Style * UseDecor bluegray
+
+*FvwmPager: Colorset * 0
+*FvwmPager: HilightColorset * 1
+*FvwmTaskBar: StartIcon buttons/glass_square.xpm
+Style "FvwmTaskBar" Sticky, NoTitle, NoHandles, BorderWidth 2, HandleWidth 2, WindowListSkip
+Style "FvwmPager" Sticky, NoTitle, NoHandles, BorderWidth 2, HandleWidth 2, WindowListSkip
+
+Style MyStartMenu BorderWidth 0, HandleWidth 0
+Style NavButtons BorderWidth 0, HandleWidth 0

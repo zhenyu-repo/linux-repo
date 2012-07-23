@@ -1,0 +1,176 @@
+#---------------------------------------------------------------------
+#-  File          : ~/.fvwm/windowdecors/winxp/config
+#-  Contents      : fvwm window decoration description
+#-  Author        : Uwe Pross - taken from fvwm-theme                                         
+#---------------------------------------------------------------------
+
+SetEnv COLOR      Steelblue3
+SetEnv HICOLOR    Dodgerblue2
+SetEnv FG_COLOR   black
+SetEnv FG_HICOLOR white
+SetEnv MaxDeskNumber 1
+SetEnv XPMPath $[HOME]/.fvwm/windowdecors/winxp/images
+# ImagePath +:$[HOME]/.fvwm/windowdecors/winxp/images
+
+#---------------------------------------------------------------------
+# DestroyDecor WinXPDecor
+AddToDecor WinXPDecor
++ TitleStyle Active        AdjustedPixmap $[XPMPath]/title-active.xpm -- Flat
++ TitleStyle Inactive      AdjustedPixmap $[XPMPath]/title-inactive.xpm -- Flat
+
++ ButtonStyle 1 MiniIcon -- UseTitleStyle Flat
+
++ ButtonStyle 2 ActiveUp   AdjustedPixmap $[XPMPath]/close-activeup.xpm -- UseTitleStyle Flat
++ ButtonStyle 2 ActiveDown AdjustedPixmap $[XPMPath]/close-activedown.xpm -- UseTitleStyle Flat
++ ButtonStyle 2 AllInactive   AdjustedPixmap $[XPMPath]/close-inactive.xpm -- UseTitleStyle Flat
+
++ ButtonStyle 4 AllActiveUp   AdjustedPixmap $[XPMPath]/maximize-activeup.xpm -- UseTitleStyle Flat
++ ButtonStyle 4 AllActiveDown AdjustedPixmap $[XPMPath]/maximize-activedown.xpm -- UseTitleStyle Flat
+# + ButtonStyle 4 ToggledActiveUp AdjustedPixmap $[XPMPath]/maximize-activedown.xpm -- UseTitleStyle Flat
+# + ButtonStyle 4 ToggledActiveDown AdjustedPixmap $[XPMPath]/maximize-activedown.xpm -- UseTitleStyle Flat
++ ButtonStyle 4 AllInactive   AdjustedPixmap $[XPMPath]/maximize-inactive.xpm -- UseTitleStyle Flat
+
++ ButtonStyle 6 AllActiveUp   AdjustedPixmap $[XPMPath]/iconify-activeup.xpm -- UseTitleStyle Flat
+# + ButtonStyle 6 ToggledActiveUp AdjustedPixmap $[XPMPath]/iconify-activedown.xpm -- UseTitleStyle Flat
++ ButtonStyle 6 ActiveDown AdjustedPixmap $[XPMPath]/iconify-activedown.xpm -- UseTitleStyle Flat
++ ButtonStyle 6 AllInactive AdjustedPixmap $[XPMPath]/iconify-inactive.xpm -- UseTitleStyle Flat
+
++ ButtonStyle All - Clear
++ ButtonStyle 1 - MWMDecorMenu
++ ButtonStyle 4 - MWMDecorMax
++ ButtonStyle 6 - MWMDecorMin
+
++ TitleStyle Centered Height 24
+
++ BorderStyle Active Colorset 
++ BorderStyle Inactive Solid $[HICOLOR] -- HiddenHandles NoInset 
++ BorderStyle Active   Solid $[COLOR]   -- HiddenHandles NoInset 
+
+Style WinXPStyle \
+    UseDecor WinXPDecor, \
+    Colorset, BorderColorset, \
+    HilightColorset, HilightBorderColorset \
+    BorderWidth 4, HandleWidth 4, \
+    ForeColor $[FG_COLOR], BackColor $[COLOR], \
+    HilightFore $[FG_HICOLOR], HilightBack $[HICOLOR], \
+    Button 1, Button 2, NoButton 3, Button 4, Button 6, NoButton 8, \
+    Font -*-helvetica-medium-r-*-*-14-*-*-*-*-*-*-*, \
+    MiniIcon $[XPMPath]/terminal.xpm
+
+#-------------------------------------------------------------------------------
+#- menus
+#-------------------------------------------------------------------------------
+DestroyMenu MoveWindowToPageMenu
+AddToMenu MoveWindowToPageMenu "Move window to another page" Title
++ "Desk left" MoveToDesk  0 -1 0 $[MaxDeskNumber]
++ "Desk right" MoveToDesk  0 +1 0 $[MaxDeskNumber]
++ "" Nop
++ "Page up" MoveToPage +0p -1p
++ "Page left" MoveToPage -1p  0p
++ "Page right" MoveToPage +1p  0p
++ "Page down" MoveToPage +0p +1p
+
+DestroyMenu MaximizeMenu
+AddToMenu MaximizeMenu "Maximize" Title
++ "Maximize" Maximize 100 100
++ "Maximize vertical" Maximize 0 100
++ "Maximize horizontal" Maximize 100 0
++ "" Nop
++ "Grow" Maximize True grow grow
++ "Grow vertical" Maximize True 0 grow
++ "Grow horizontal" Maximize True grow 0
++ "" Nop
++ "Iconify" Iconify
+
+DestroyMenu IconifyMenu
+AddToMenu IconifyMenu "Iconify" Title
++ "Iconify" Iconify
++ "" Nop
++ "Stick all icons" All (Currentpage, Iconic, CirculateHit) Stick on
++ "Stick all windows" All (Currentpage, !Iconic, CirculateHit) Stick on
++ "" Nop
++ "Unstick all icons" All (Currentpage, Iconic, CirculateHit) Stick off
++ "Unstick all windows" All (Currentpage, !Iconic, CirculateHit) Stick off
+
+DestroyMenu WindowOptionsMenu
+AddToMenu WindowOptionsMenu "Window menu" Title
++ "&Maximize/Normal" Maximize 100 100
++ "(Un)S&tick" Stick
++ "&Shade" WindowShade
++ "&Iconify" Iconify
++ "Mo&ve" Move
++ "Resi&ze" Resize
++ "Raise" Raise
++ "Lower" Lower
++ "" Nop
++ "Ident" Module FvwmIdent
++ "" Nop
++ "Stays on Top" Layer 0 5
++ "Stays on Bottom" Layer 0 3
++ "Raise on Click" Layer 0 4
++ "" Nop
++ "&Close" Delete
++ "&Kill" Destroy
+
+DestroyMenu DeleteMenu
+AddToMenu DeleteMenu
++ "Delete" Delete
++ "" Nop
++ "Kill" Destroy
+
+#-------------------------------------------------------------------------------
+#- functions
+#-------------------------------------------------------------------------------
+DestroyFunc ResizeOrRaiseOrLowerFunc
+AddToFunc ResizeOrRaiseOrLowerFunc C Raise
++ M Resize
++ D Lower
+
+DestroyFunc MoveOrRaiseOrLowerFunc
+AddToFunc MoveOrRaiseOrLowerFunc
++ I Raise
+# + I Current (!Raised) Raise
+# + C TestRc (NoMatch) Lower
++ M Move
++ D Maximize 100 100
+
+SetEnv APP_NAME XTerm
+SetEnv APP_NAME *
+Style $[APP_NAME] UseStyle WinXPStyle
+
+#-------------------------------------------------------------------------------
+#- mouse defs
+#-------------------------------------------------------------------------------
+## window frame and side
+Mouse ($[APP_NAME]) 1 F A Function ResizeOrRaiseOrLowerFunc
+Mouse ($[APP_NAME]) 2 F A Menu WindowOptionsMenu Nop
+Mouse ($[APP_NAME]) 3 F A RaiseLower
+
+Mouse ($[APP_NAME]) 1 S A Function ResizeOrRaiseOrLowerFunc
+Mouse ($[APP_NAME]) 2 S A Menu WindowOptionsMenu Nop
+Mouse ($[APP_NAME]) 3 S A RaiseLower
+
+## title bar + 2 decoration buttons
+Mouse ($[APP_NAME]) 1 T38 A Function MoveOrRaiseOrLowerFunc
+Mouse ($[APP_NAME]) 2 T38 A WindowShade
+Mouse ($[APP_NAME]) 3 T38 A RaiseLower
+
+## window title buttons
+Mouse ($[APP_NAME]) 1 1 A Menu WindowOptionsMenu Delete
+Mouse ($[APP_NAME]) 2 1 A Stick
+Mouse ($[APP_NAME]) 3 1 A Menu MoveWindowToPageMenu
+
+Mouse ($[APP_NAME]) 1 6 A Iconify on
+Mouse ($[APP_NAME]) 2 6 A All (CurrentPage,!Fvwm*B*) Iconify on
+Mouse ($[APP_NAME]) 3 6 A Menu IconifyMenu Iconify
+
+Mouse ($[APP_NAME]) 1 4 A Maximize 100 100
+Mouse ($[APP_NAME]) 2 4 A Maximize True grow grow
+Mouse ($[APP_NAME]) 3 4 A Menu MaximizeMenu
+
+Mouse ($[APP_NAME]) 1 2 A Delete
+Mouse ($[APP_NAME]) 2 2 A Nop
+Mouse ($[APP_NAME]) 3 2 A Menu DeleteMenu
+
+
+## end of file

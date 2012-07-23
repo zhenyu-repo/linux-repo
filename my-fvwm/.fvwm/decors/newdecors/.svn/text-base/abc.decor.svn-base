@@ -1,0 +1,63 @@
+AddToDecor "ABC"  BorderStyle -- !NoInset HiddenHandles
+
+AddToDecor "ABC"  TitleStyle -- flat
+AddToDecor "ABC"  TitleStyle Height 22
+AddToDecor "ABC"  TitleStyle LeftJustified
+
+AddToDecor "ABC"  TitleStyle Active MultiPixmap \
+    Main buttons/stripe2.xpm \
+    LeftOfText (stretched) buttons/glassbrt_left.xpm \
+    UnderText (stretched) buttons/glass_blue_bar.xpm \
+    RightOfText (stretched) buttons/glassbrt_right.xpm
+AddToDecor "ABC"  TitleStyle Inactive MultiPixmap \
+    Main buttons/stripe1.xpm \
+    LeftOfText (stretched) buttons/glassbrt_left.xpm \
+    UnderText (stretched) buttons/glassbrt_mid.xpm \
+    RightOfText (stretched) buttons/glassbrt_right.xpm
+
+Colorset 0 fg gray30, bg #9898A0, TiledPixmap buttons/stripe1.xpm, Tint
+Colorset 1 fg white, bg #B9B9B9, TiledPixmap buttons/stripe2.xpm, Tint
+Colorset 2 fg black, bg #9898A0, Pixmap buttons/glassbrt_button.xpm, Tint
+Colorset 3 fg white, bg #B9B9B9, Pixmap buttons/glassbrt_button.xpm, Tint
+Colorset 4 fg black, bg #B9B9B9, TiledPixmap buttons/stripe2.xpm, Tint
+
++ ButtonStyle Reset
++ ButtonStyle All Pixmap empty.xpm
++ ButtonStyle All -- UseTitleStyle
++ AddButtonStyle 1 Active pixmap buttons/blueglass_menu.xpm
++ AddButtonStyle 1 Inactive pixmap buttons/grayglass_menu.xpm
++ AddButtonStyle 2 Active pixmap buttons/greenglass_max.xpm
++ AddButtonStyle 2 Inactive pixmap buttons/grayglass_max.xpm
++ AddButtonStyle 3 Active pixmap buttons/redglass_close.xpm
++ AddButtonStyle 3 Inactive pixmap buttons/grayglass_close.xpm
++ AddButtonStyle 4 Active pixmap buttons/yellowglass_min.xpm
++ AddButtonStyle 4 Inactive pixmap buttons/grayglass_min.xpm
+
+IconFont "-adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+*FvwmIconMan: 1 Font "-adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+
+MenuStyle * MenuColorset 4
+MenuStyle * BorderWidth 2
+MenuStyle * TrianglesRelief
+MenuStyle * Font "-adobe-helvetica-bold-r-normal--12-120-75-75-p-70-iso8859-1,-*-simsun-medium-r-normal-*-13-*-*-*-*-*-*-*"
+MenuStyle * SidePic
+
+Style * Colorset 0
+Style * HilightColorset 1
+Style * BorderWidth  4
+Style * HandleWidth  5
+#Style * Font -adobe-helvetica-bold-r-normal--14-140-75-75-p-82-iso8859-1
+Style * MwmBorder
+
+Style * IconTitleColorset 2
+Style * HilightIconTitleColorset 3
+
+Style * UseDecor ABC
+
+*FvwmPager: Colorset * 0
+*FvwmPager: HilightColorset * 1
+*FvwmTaskBar: StartIcon buttons/glassbrt_square.xpm
+Style "FvwmTaskBar" Sticky, NoTitle, NoHandles, BorderWidth 2, HandleWidth 2, WindowListSkip
+Style "FvwmPager" Sticky, NoTitle, NoHandles, BorderWidth 2, HandleWidth 2, WindowListSkip
+Style MyStartMenu BorderWidth 0, HandleWidth 0
+Style NavButtons BorderWidth 0, HandleWidth 0

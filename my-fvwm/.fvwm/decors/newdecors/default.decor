@@ -1,0 +1,58 @@
+###
+# My Vectors look like this
+#
+# +----------------------------------------------------------+
+# | .                                                _  #  X |
+# +----------------------------------------------------------+
+# | 1                                                6  4  2 |
+# |                                                          |
+#                                                            |
+#
+# When the Buttons are ActiveDown (Pressed), they move 5% to the right
+# and 5% down, which gives the impression of being pressed. I've also used
+# a vector to seperate the buttons out on active windows. #
+# Active Window TitleBar has a Vertical Gradient of White (at the top) to
+# Black at the bottom where the buttons are, and a gradient of Blue to black over
+# the title, using 16 shades (one for each pixel, so looks like a nice, smooth transition).
+#
+# Inactive uses a tinted transparent colorset, with white text and buttons.
+##################
+
+DestroyDecor DefaultDecor
+AddToDecor DefaultDecor
++ TitleStyle LeftJustified Height 16
++ TitleStyle InActive ( Colorset 8 -- Flat ) \
+    Active ( VGradient 16 1 #5a8ade 50 #000000 -- Flat )
++ ButtonStyle All InActive ( Colorset 8 -- Flat )
++ ButtonStyle All Active ( VGradient 15 1 #f6f6f6 90 #000000 -- Flat )
++ AddButtonStyle  4 ActiveUp Vector 9 30x30@2 30x60@2 60x60@2 60x30@2 \
+        30x30@2 30x35@2 60x35@2 0x99@4 0x0@2 -- Flat
++ AddButtonStyle  4 Inactive Vector 7 30x30@3 30x60@3 60x60@3 60x30@3 \
+        30x30@3 30x35@3 60x35@3 -- Flat
++ AddButtonStyle  4 ActiveDown Vector 10 35x35@2 35x65@2 65x65@2 65x35@2 \
+        35x35@2 35x40@2 65x40@2 0x99@4 0x0@2 99x0@2 -- Flat
++ AddButtonStyle  1 Inactive Vector 4 44x44@3 44x45@3 45x45@3 44x44@3 -- Flat
++ AddButtonStyle  1 ActiveUp Vector 6 44x44@2 44x45@2 45x45@2 44x44@2 99x99@4 \
+        99x0@2 -- Flat
++ AddButtonStyle  1 ActiveDown Vector 8 49x49@2 49x50@2 50x50@2 49x49@2 99x90@4 \
+        99x0@2 99x0@2 0x0@2-- Flat
++ AddButtonStyle  6 ActiveUp Vector 7 30x60@2 60x60@2 60x50@2 30x50@2 30x60@2 0x99@4 \
+        0x0@2 -- Flat
++ AddButtonStyle  6 Inactive Vector 5 30x60@3 60x60@3 60x50@3 30x50@3 30x60@3 -- Flat
++ AddButtonStyle  6 ActiveDown Vector 8 35x65@2 65x65@2 65x60@2 35x60@2 35x65@2 0x99@4 \
+        0x0@2 99x0@2 -- Flat
++ AddButtonStyle  2 ActiveUp Vector 6 30x30@2 60x60@2 60x30@4 30x60@2 0x99@4 \
+        0x0@2 -- Flat
++ AddButtonStyle  2 Inactive Vector 4 30x30@3 60x60@3 60x30@4 30x60@3 -- Flat
++ AddButtonStyle  2 ActiveDown Vector 7 35x35@2 65x65@2 65x35@4 35x65@2 0x99@4 \
+        0x0@2 99x0@2 -- Flat
++ ButtonStyle 1 - MwmDecorMenu
++ ButtonStyle 6 - MwmDecorMin
++ ButtonStyle 4 - MwmDecorMax
+Style * Font "-*-verdana-medium-r-normal-*-12-*-*-*-*-*-iso8859-*,-*-simsun-medium-r-normal-*-13-*-*-*-*-*-*-*"
+MenuStyle * Font "-*-verdana-medium-r-normal-*-12-*-*-*-*-*-iso8859-*,-*-simsun-medium-r-normal-*-13-*-*-*-*-*-*-*"
+Style * UseDecor DefaultDecor
+Style * BorderWidth 0
+Style * HandleWidth 1
+Style MyStartMenu BorderWidth 0, HandleWidth 0
+Style NavButtons BorderWidth 0, HandleWidth 0

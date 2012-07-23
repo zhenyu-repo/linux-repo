@@ -1,0 +1,48 @@
+Mutt Icon Animation for WMMail
+-------------------------------
+
+Assembled by Rich Lafferty <rich@alcor.concordia.ca
+
+These XPM icons were put together from an animated GIF of the Mutt
+dog running back and forth and the classic NEXTSTEP envelope icon.
+By using WMMail's Animations settings, you can have a little dog
+that runs around when you get new mail -- does it get any better
+than this?
+
+On my machine, I get a little dog alone when I've got no mail,
+a dog with a letter when I've got read mail, and a dog running
+around with a letter behind when I've got new mail. The appropriate
+bit of my ~/GNUstep/Defaults/WMMail looks like:
+
+  Animations = {
+    Empty = {
+      Frames = ("/home/rich/mutt-anim/mutt-nomail.xpm");
+    };
+    Old = {
+      Frames = ("/home/rich/mutt-anim/mutt1.xpm");
+    };
+    New = {
+      Delay = 1;
+      Frames = ("/home/rich/mutt-anim/mutt1.xpm",
+                "/home/rich/mutt-anim/mutt2.xpm",
+                "/home/rich/mutt-anim/mutt3.xpm",
+                "/home/rich/mutt-anim/mutt4.xpm",
+                "/home/rich/mutt-anim/mutt5.xpm",
+                "/home/rich/mutt-anim/mutt6.xpm",
+                "/home/rich/mutt-anim/mutt7.xpm",
+                "/home/rich/mutt-anim/mutt8.xpm",
+                "/home/rich/mutt-anim/mutt9.xpm",
+                "/home/rich/mutt-anim/muttA.xpm",
+                "/home/rich/mutt-anim/muttB.xpm",
+                "/home/rich/mutt-anim/muttC.xpm");
+    };
+
+If you prefer envelope-without-a-dog to a dog-without-an-envelope,
+then use 'mail-nomutt.xpm' in place of 'mutt-nomail.xpm'.
+
+I found the dog GIF on a handful of Mutt pages including Brandon
+Long's at <http://www.fiction.net/blong/programs/mutt/>, and the
+mail icon has just been around on my WindowMaker install forever.
+
+Enjoy!
+

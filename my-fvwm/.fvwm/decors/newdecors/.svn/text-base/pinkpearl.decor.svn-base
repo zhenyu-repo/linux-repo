@@ -1,0 +1,55 @@
+AddToDecor "pinkpearl" BorderStyle Active   TiledPixmap buttons/Pearl.xpm
+AddToDecor "pinkpearl" BorderStyle Inactive TiledPixmap buttons/Pearl_darker.xpm
+AddToDecor "pinkpearl" BorderStyle -- HiddenHandles
+AddToDecor "pinkpearl" BorderStyle -- NoInset
+
+AddToDecor "pinkpearl" TitleStyle ActiveUp   TiledPixmap buttons/Pearl.xpm
+AddToDecor "pinkpearl" TitleStyle ActiveDown TiledPixmap buttons/Pearl.xpm
+AddToDecor "pinkpearl" TitleStyle Inactive   TiledPixmap buttons/Pearl_darker.xpm
+AddToDecor "pinkpearl" TitleStyle ActiveUp -- flat
+AddToDecor "pinkpearl" TitleStyle ActiveDown -- raised
+AddToDecor "pinkpearl" TitleStyle Inactive -- flat
+AddToDecor "pinkpearl" TitleStyle Centered
+AddToDecor "pinkpearl" TitleStyle Height 25
+
++ ButtonStyle Reset
++ ButtonStyle All Pixmap empty.xpm
++ ButtonStyle All -- UseTitleStyle
++ ButtonStyle All -- flat
++ AddButtonStyle 1 pixmap buttons/pearl_menu.xpm
++ AddButtonStyle 2 pixmap buttons/pearl_max.xpm
++ AddButtonStyle 3 pixmap buttons/Pearl_white.xpm
++ AddButtonStyle 4 pixmap buttons/pearl_min.xpm
+
+IconFont "-adobe-helvetica-medium-r-normal--10-100-75-75-p-56-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+*FvwmIconMan: 1 Font "-adobe-helvetica-medium-r-normal--10-100-75-75-p-56-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+
+Colorset 0 fg black, bg #a29fa2, TiledPixmap buttons/Pearl_darker.xpm, Tint
+Colorset 1 fg gray30, bg #a29fa2, TiledPixmap buttons/Pearl.xpm, Tint
+
+MenuStyle * MenuColorset 1
+MenuStyle * BorderWidth 3
+MenuStyle * TrianglesRelief
+MenuStyle * Font "-b&h-lucida-bold-r-normal-sans-12-120-75-75-p-79-iso8859-1,-*-simsun-medium-r-normal-*-14-*-*-*-*-*-*-*"
+MenuStyle * MenuFace TiledPixmap buttons/Pearl.xpm
+MenuStyle * SidePic
+
+Style * Colorset 0
+Style * HilightColorset 1
+
+Style * Font "-b&h-lucida-bold-r-normal-sans-18-180-75-75-p-120-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+Style * BorderWidth 7
+Style * HandleWidth 7
+
+Style * UseDecor pinkpearl
+
+Style * IconTitleColorset 0
+Style * HilightIconTitleColorset 1
+
+*FvwmPager: Colorset * 0
+*FvwmPager: HilightColorset * 1
+*FvwmTaskBar: StartIcon buttons/Pearl_white.xpm
+Style "FvwmTaskBar" Sticky, NoTitle, NoHandles, BorderWidth 1, HandleWidth 1, WindowListSkip
+Style "FvwmPager" Sticky, NoTitle, NoHandles, BorderWidth 2, HandleWidth 2, WindowListSkip
+Style MyStartMenu BorderWidth 0, HandleWidth 0
+Style NavButtons BorderWidth 0, HandleWidth 0

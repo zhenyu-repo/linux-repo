@@ -1,0 +1,63 @@
+AddToDecor "goldleaf" BorderStyle -- Raised !HiddenHandles
+AddToDecor "goldleaf" BorderStyle Inactive TiledPixmap buttons/goldleaf_border.xpm
+AddToDecor "goldleaf" BorderStyle Active TiledPixmap buttons/goldleaf_border.xpm
+
+AddToDecor "goldleaf" TitleStyle MultiPixmap \
+    LeftMain buttons/goldleaf.xpm \
+    RightMain buttons/goldleaf.xpm \
+    LeftOfText buttons/gold_grad_left.xpm \
+    UnderText (stretched) buttons/gold_grad_mid.xpm \
+    RightOfText buttons/gold_grad_right.xpm
+
+AddToDecor "goldleaf" TitleStyle -- raised
+AddToDecor "goldleaf" TitleStyle Centered
+AddToDecor "goldleaf" TitleStyle Height 24
+
++ ButtonStyle Reset
++ ButtonStyle All Pixmap empty.xpm
++ ButtonStyle All DGradient 24 #b29963 ivory
++ AddButtonStyle 1 ActiveUp   pixmap buttons/gold_menu.xpm
++ AddButtonStyle 1 ActiveDown pixmap buttons/gold_menu.xpm
++ AddButtonStyle 2 ActiveUp   pixmap buttons/gold_max.xpm
++ AddButtonStyle 2 ActiveDown pixmap buttons/gold_max.xpm
++ AddButtonStyle 3 ActiveUp   pixmap buttons/gold_close.xpm
++ AddButtonStyle 3 ActiveDown pixmap buttons/gold_close.xpm
++ AddButtonStyle 4 ActiveUp   pixmap buttons/gold_min.xpm
++ AddButtonStyle 4 ActiveDown pixmap buttons/gold_min.xpm
++ AddButtonStyle 1 Inactive pixmap buttons/goldleaf.xpm
++ AddButtonStyle 2 Inactive pixmap buttons/goldleaf.xpm
++ AddButtonStyle 3 Inactive   pixmap buttons/medallion.xpm
++ AddButtonStyle 4 Inactive   pixmap buttons/medallion.xpm
+
+IconFont "-adobe-helvetica-medium-r-normal--10-100-75-75-p-56-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+*FvwmIconMan: 1 Font "-adobe-helvetica-medium-r-normal--10-100-75-75-p-56-iso8859-1,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+
+Colorset 0 fg #5a5142, bg #baa57f, DGradient 48 ivory #b19863, Tint
+Colorset 1 fg #251100, bg #baa57f, DGradient 48 ivory #b19863, Tint
+Colorset 2 fg #251100, bg #baa57f, VGradient 48 #b19863 ivory, Tint
+
+MenuStyle * MenuColorset 0
+MenuStyle * BorderWidth 2
+MenuStyle * TrianglesRelief
+MenuStyle * Font "-b&h-lucida-bold-i-normal-sans-14-140-75-75-p-92-iso8859-1,-*-simsun-medium-r-normal-*-14-*-*-*-*-*-*-*"
+MenuStyle * SidePic buttons/goldleaf_vert.xpm
+
+Style * Colorset 0
+Style * HilightColorset 1
+Style * BorderWidth 8
+Style * HandleWidth 8
+Style * Font "-b&h-lucida-bold-i-normal-sans-12-*-*-*-*-*-iso8859-*,-*-simsun-medium-r-normal-*-12-*-*-*-*-*-*-*"
+Style * FvwmBorder
+
+Style * UseDecor goldleaf
+
+Style * IconTitleColorset 0
+Style * HilightIconTitleColorset 2
+
+*FvwmPager: Colorset * 0
+*FvwmPager: HilightColorset * 2
+*FvwmTaskBar: StartIcon buttons/medallion.xpm
+Style "FvwmTaskBar" Sticky, NoTitle, NoHandles, BorderWidth 2, HandleWidth 2, WindowListSkip
+Style "FvwmPager" Sticky, NoTitle, NoHandles, BorderWidth 2, HandleWidth 2, WindowListSkip
+Style MyStartMenu BorderWidth 0, HandleWidth 0
+Style NavButtons BorderWidth 0, HandleWidth 0
