@@ -28,6 +28,7 @@ EdgeResistance 250 10
 EdgeScroll 100 100
 ClickTime 750
 
+# Layout of the Window
 # 桌面的分割方式，2x2表示一个桌面被分割4个，如下：
 # ------------
 # |    |    | 
@@ -279,6 +280,7 @@ AddToMenu MenuFvwmMisc
 DestroyMenu MenuFvwmTools
 AddToMenu MenuFvwmTools
 + "&Gimp"		Exec gimp
++ "&Eclipse"	Exec $HOME/apps/eclipse/eclipse
 
 
 DestroyMenu HomeDirMenu
