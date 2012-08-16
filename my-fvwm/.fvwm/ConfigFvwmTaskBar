@@ -1,5 +1,6 @@
 Style "FvwmTaskBar" NoTitle, BorderWidth 4, HandleWidth 2, Sticky
-Style "FvwmTaskBar" StaysOnTop, WindowListSkip, CirculateSkip
+#Style "FvwmTaskBar" StaysOnTop, WindowListSkip, CirculateSkip
+Style "FvwmTaskBar" WindowListSkip, CirculateSkip
 
 DestroyModuleConfig FvwmTaskBar: *
 # TaskBar的初始行数
@@ -34,7 +35,7 @@ DestroyModuleConfig FvwmTaskBar: *
 # 多长时间去检查一下邮箱，单位秒
 *FvwmTaskBar: MailCheck 600
 *FvwmTaskBar: MailCommand Exec urxvt -e mutt 
-*FvwmTaskBar: ClockFormat %H:%M
+*FvwmTaskBar: ClockFormat %b%d %H:%M
 
 # 任务栏开始菜单的名字，类似Windows的开始菜单
 *FvwmTaskBar: StartName FVWM Start
