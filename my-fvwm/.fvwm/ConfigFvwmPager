@@ -1,5 +1,7 @@
 ########################### Pager ####################################
+
 DestroyModuleConfig FvwmPager: *
+
 *FvwmPager: Rows 1
 *FvwmPager: Back #908090
 *FvwmPager: Fore #484048
