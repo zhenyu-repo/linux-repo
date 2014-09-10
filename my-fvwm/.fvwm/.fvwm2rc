@@ -241,11 +241,18 @@ FuncFvwmWindowCommon MenuFvwmWindowOps2
 DestroyMenu MenuFvwmMisc
 AddToMenu MenuFvwmMisc
 + %mini.chinese.xpm%"Fcitx"		Exec fcitx
++ "Reset background to black"		Exec xsetroot -solid black
 + "Kill Fcitx"				Exec killall fcitx
 + "Browse my pictures"			Exec xloadimage $HOME/Pictures/*
 + "MM:)"				Popup HomeDirMenu
-+ "Change WallPaper"			Popup WallPaperMenu
++ "Change wallpaper"			Popup MenuWallpaper
 
+# Menu Wallpaper
+DestroyMenu MenuWallpaper
+AddToMenu MenuWallpaper
+	PipeRead 'for i in /z/wallpapers/*; \
+	do echo "+ $i Exec xloadimage -onroot $i"; done'
+	
 # Menu Tools
 DestroyMenu MenuFvwmTools
 AddToMenu MenuFvwmTools
@@ -258,13 +265,6 @@ DestroyMenu HomeDirMenu
 AddToMenu HomeDirMenu
 	PipeRead 'for i in $HOME/picture/mm/*; \
 	do echo "+ $i Exec xloadimage $i"; done'
-
-# 改变墙纸
-DestroyMenu WallPaperMenu
-AddToMenu WallPaperMenu
-	PipeRead 'for i in $HOME/picture/mm/*; \
-	do echo "+ $i Exec xloadimage -onroot -fullscreen $i"; done'
-
 
 DestroyMenu MenuFvwmModules
 AddToMenu MenuFvwmModules "Fvwm Modules"        Title
