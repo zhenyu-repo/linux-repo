@@ -52,7 +52,7 @@ MenuStyle * PopupDelayed, PopupDelay 160, Animation, TitleWarp
 Style * HilightFore black, HilightBack gray30
 
 # HandleWidth define handle width of windows
-Style * BorderWidth 7, HandleWidth 4
+Style * BorderWidth 7, HandleWidth 3
 Style *           Icon unknown1.xpm, Color lightgrey/dimgrey
 Style *           MWMFunctions, MWMDecor, HintOverride
 Style *           DecorateTransient, NoPPosition
@@ -148,14 +148,14 @@ AddToFunc SessionInitFunction
 # Menu
 ######################################
 DestroyMenu MenuFvwmRoot
-AddToMenu MenuFvwmRoot %wang%"Root Menu" Title
+AddToMenu MenuFvwmRoot %mini.x.xpm%"Root Menu" Title
 + %mini.xterm.xpm%"&1. XTerm"		Exec exec xterm -fn 7x13 -fg gray -bg black
 + %fvwm_console.png%"&2. Rxvt"		Exec exec urxvt 
 + %gterm.png%"&3. GTerm"		Exec exec gnome-terminal
 + %firefox_icon.png%"&4. FireFox"	Exec exec firefox
 + %chrome.png%"&5. Google Chrome"	Exec exec chromium-browser
 + "&6. Planner"				Exec exec planner
-+ "&7. Gnome Commander"			Exec exec gnome-commander
++ %nautilus.png%"&7. Nautilus"			Exec exec nautilus --no-desktop
 + ""              			Nop
 + "&R. Misc"				Popup MenuFvwmMisc
 + "&T. Tools"				Popup MenuFvwmTools
@@ -214,7 +214,7 @@ AddToFunc FuncFvwmWindowCommon
 + I AddToMenu $0 (Un)Ma&ximize		Maximize
 + I AddToMenu $0 ""			Nop
 + I AddToMenu $0 &Delete		Delete
-+ I AddToMenu $0 &Close			Close
++ I AddToMenu $0 %mini.cross.xpm%&Close	Close
 + I AddToMenu $0 Destroy		Destroy
 + I AddToMenu $0 ""			Nop
 
@@ -316,7 +316,7 @@ AddToFunc FuncFvwmConfigureIconBox
 DestroyMenu MenuFvwmQuitVerify
 AddToMenu MenuFvwmQuitVerify "Really Quit Fvwm?" Title
 + "&L. Just Lock"	 		Exec xlock
-+ "&Q. Yes, Really Quit"		Quit
++ %exit.png%"&Q. Yes, Really Quit"	Quit
 + "&N. No, Don't Quit"			Nop
 + "&R. Restart"				Restart
 + "&T. Start twm"			Restart twm
