@@ -315,7 +315,7 @@ AddToFunc FuncFvwmConfigureIconBox
 
 DestroyMenu MenuFvwmQuitVerify
 AddToMenu MenuFvwmQuitVerify "Really Quit Fvwm?" Title
-+ "&L. Just Lock"	 		Exec xlock
++ "&L. Just Lock"	 		Exec xscreensaver-command -lock
 + %exit.png%"&Q. Yes, Really Quit"	Quit
 + "&N. No, Don't Quit"			Nop
 + "&R. Restart"				Restart
