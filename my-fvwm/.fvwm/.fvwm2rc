@@ -40,7 +40,7 @@ DeskTopSize 2x2
 
 # Menu
 MenuStyle * fvwm, Foreground black, Background grey60, Greyed grey40
-MenuStyle * MenuFace VGradient 64 darkgray gray20
+#MenuStyle * MenuFace VGradient 64 darkgray gray20
 MenuStyle * PopupDelayed, PopupDelay 160, Animation, TitleWarp
 
 # Default Styles
@@ -149,7 +149,7 @@ AddToFunc SessionInitFunction
 ######################################
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot %wang%"Root Menu" Title
-+ "&1. XTerm"				Exec exec xterm -fn 7x13 -fg gray -bg black
++ %mini.xterm.xpm%"&1. XTerm"		Exec exec xterm -fn 7x13 -fg gray -bg black
 + %fvwm_console.png%"&2. Rxvt"		Exec exec urxvt 
 + %gterm.png%"&3. GTerm"		Exec exec gnome-terminal
 + %firefox_icon.png%"&4. FireFox"	Exec exec firefox
@@ -170,12 +170,12 @@ AddToMenu MenuFvwmRoot %wang%"Root Menu" Title
 + "&F. Refresh Screen"			Refresh
 + "&C. Recapture Screen"		Recapture
 + ""              			Nop
-+ "&X. Exit Fvwm" 			Popup MenuFvwmQuitVerify
++ %exit.png%"&X. Exit Fvwm" 		Popup MenuFvwmQuitVerify
 
 DestroyMenu MenuFvwmUtilities
 AddToMenu MenuFvwmUtilities "Utilities" Title
 + "&T. Top"       			Exec exec xterm -T Top -n Top -e top
-+ "&C. Calculator" 			Exec exec xcalc
++ %mini.calc.xpm%"&C. Calculator" 	Exec exec xcalc
 + "&K. Clock"				Exec exec xclock -digital -update 1 -geometry 190x34-0+0  -fg green -bg black
 + "&G. Xmag"      			Exec exec xmag
 + "&R. Editres"   			Exec exec editres
