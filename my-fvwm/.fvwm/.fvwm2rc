@@ -11,7 +11,7 @@
 #
 # hi[at]charry.org
 # http://www.charry.org
-#
+# tab size: 8
 #########################################################################
 
 SetEnv FVWM_IMG_PATH $[HOME]/.fvwm/images
@@ -86,6 +86,12 @@ Style xmh         NoButton 2
 Style xmag        Icon mag_glass.xpm, ClickToFocus
 Style Firefox-bin Icon firefox.png, ClickToFocus
 Style xmosaic     Color Green/Yellow, ClickToFocus
+#Style *term TitleAtLeft
+
+# Close button and event handler on Window title bar
+ButtonStyle 6	17 	20x20@1 30x20@1 50x40@1 70x20@1 80x20@1 80x30@0 60x50@0 80x70@1\
+			80x80@0 70x80@0 50x60@0 30x80@0 20x80@0 20x70@0 40x50@1 20x30@0 20x20@1
+Mouse 1 6       A       Close
 
 # Windows
 # Display the window content when you drag the window
