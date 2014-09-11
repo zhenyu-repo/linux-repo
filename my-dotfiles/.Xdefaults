@@ -1,0 +1,99 @@
+!
+! If it does not work, run $xrdb ~/.Xdefaults
+!
+
+! Rxvt
+! transparency - true or false (default)
+!URxvt*transparent:true
+
+URxvt*geometry: 110x20
+
+! tint with any color; i.e., blue, red, tomato4, olivedrab2, etc.
+!   some nice listings are at:
+!     http://www.nisrv.com/modules.php?name=Hex_Colors
+!     http://www.htmlgoodies.com/tutorials/colors/article.php/3478921
+URxvt*tintColor:black
+
+! shading - 0 to 99 darkens, 101 to 200 lightens.
+!URxvt*shading:40
+
+! scrollback buffer lines - 65535 is max (64 is default)
+URxvt*saveLines:12000
+
+! Font color (default is black)
+URxvt*foreground:White
+
+! background color (prior to tinting) (default is white)
+URxvt*background:Black
+
+! xft fonts - anti-aliased xft font setup is nice, but can be choppy
+URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=13
+
+! traditional fonts - a more traditional font setup in lieu of xft
+!URxvt*font:-*-courier-medium-r-normal-*-*-140-*-*-*-*-iso8859-1
+!URxvt*boldFont:-*-courier-bold-r-normal-*-*-140-*-*-*-*-iso8859-1
+
+! Replace blue folder colors with a lighter shade for clarity. To
+! set colored folders and files within urxvt, xterm, and aterm, add
+! the following line to your ~/.bashrc ($HOME/.bashrc) file under
+! the heading "! User specific aliases and functions":
+!   alias ls="ls -h --color=auto"
+URxvt*color4:RoyalBlue
+URxvt*color12:RoyalBlue
+
+! scrollbar - true (default) or false
+URxvt*scrollBar:true
+
+! scrollbar position - left=false (default) or right=true
+URxvt*scrollBar_right:false
+
+! scrollbar style - rxvt (default), plain, next, or xterm
+URxvt*scrollstyle:rxvt
+
+
+!!!!!!!!!!XTerm!!!!!!!!!!!
+xterm*VT100.geometry:   80x20
+xterm*background:       black
+xterm*boldFont:         vtbold
+xterm*cursorColor:      yellow
+xterm*font:		-*-courier-medium-r-normal-*-*-140-*-*-*-*-iso8859-1
+xterm*boldFont:		-*-courier-bold-r-normal-*-*-140-*-*-*-*-iso8859-1
+xterm*foreground:       grey
+xterm*internalBorder:   2
+xterm*jumpScroll:       on
+xterm*mouse:            yellow
+xterm*reverse*Wrap:     on
+xterm.ReverseWrap:      on
+xterm*saveLines:        2000
+xterm*scrollBar:        on
+xterm*titlebar:         on
+xterm*visualBell:       on
+xterm.ActiveIcon:       on
+xterm.AllowIconInput:   on
+xterm.AutoRaise:        on
+xterm.Background:       black
+xterm.Border:           blue
+xterm.BorderWidth:      3
+xterm.Cursor:           green
+xterm.Foreground:       yellow
+xterm.InternalBorder:   2
+xterm.TextUnderIcon:    on
+
+! XLoad
+XLoad*Background: gold
+XLoad*Foreground: red
+XLoad*highlight: black
+XLoad*borderWidth: 0
+
+! XClock
+XClock*clock*analog: False
+XClock*update: 2
+XClock*Background: black
+XClock*Foreground: red
+!XClock*geometry: 60X30-250-30
+
+! Emacs
+Emacs*Background:  rgb:5b/76/86
+Emacs*Foreground:  white
+Emacs*BorderColor:  black
+

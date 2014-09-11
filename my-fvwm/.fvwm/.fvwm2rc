@@ -78,7 +78,7 @@ Style urxvt        	Icon term.xpm, SloppyFocus, IconBox -70 1 -1 -140
 Style urxvt        	MWMBorder, MWMButtons
 					
 # Styles for various common programs:
-Style *lock       NoTitle, NoHandles, Sticky, WindowListSkip, ClickToFocus, BorderWidth 1
+Style *clock      NoTitle, NoHandles, Sticky, WindowListSkip, ClickToFocus, BorderWidth 0
 Style xbiff       NoTitle, Sticky, WindowListSkip, ClickToFocus
 Style xcalc       Icon calculator.png, NoButton 2,ClickToFocus
 Style xmh         Icon mail1.xpm, NoIconTitle,StickyIcon
@@ -143,13 +143,14 @@ AddToFunc StartFunction
 #+ I Module FvwmButtons
 # Taskbar on the bottom
 #+ I Module FvwmTaskBar
-# 装载墙纸
+# Load wallpaper
 #+ I Exec exec xloadimage -onroot -fullscreen ~/.fvwm/images/wallpaper.jpg
 
 AddToFunc InitFunction
 # 下面用于设置屏幕的颜色，这个会覆盖墙纸的设置
 #+ I exec xsetroot -mod 2 2 -fg rgb:55/40/55 -bg rgb:70/50/70
 + I exec xsetroot -mod 2 2 -fg black -bg black
++ I exec xclock -d -fg red -bg black -update 1 -strftime  %H:%M:%S  -geometry 60x30-250-30 -norender -padding 1
 
 # For some SM-s (like gnome-session) there is an internal background setter.
 AddToFunc SessionInitFunction
@@ -187,7 +188,7 @@ DestroyMenu MenuFvwmUtilities
 AddToMenu MenuFvwmUtilities "Utilities" Title
 + "&T. Top"       			Exec exec xterm -T Top -n Top -e top
 + %mini.calc.xpm%"&C. Calculator" 	Exec exec xcalc
-+ "&K. Clock"				Exec exec xclock -digital -update 1 -geometry 190x34-0+0  -fg green -bg black
++ "&K. Clock"				Exec exec xclock -norender -digital -update 1 -geometry 240x40-0+0  -fg green -bg black
 + "&G. Xmag"      			Exec exec xmag
 + "&R. Editres"   			Exec exec editres
 + ""              			Nop
