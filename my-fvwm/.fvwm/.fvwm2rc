@@ -191,7 +191,7 @@ AddToMenu MenuFvwmUtilities "Utilities" Title
 + "&R. Editres"   			Exec exec editres
 + ""              			Nop
 + "&E. GNU Emacs"    			Exec exec emacs
-+ "&I. ImageMagick"			Popup MenuImageMagick
++ %imagemagick.png%"&I. ImageMagick"	Popup MenuImageMagick
 + ""              			Nop
 + "&D. Reset X defaults" 		Exec xrdb -load $HOME/.Xdefaults
 
@@ -272,7 +272,7 @@ AddToMenu MenuWallpaper
 # Menu Tools
 DestroyMenu MenuFvwmTools
 AddToMenu MenuFvwmTools
-+ "&Gimp"				Exec gimp
++ %gimp.png%"&Gimp"			Exec gimp
 + "&Eclipse"				Exec $HOME/apps/eclipse/eclipse
 + "&DbVisualizer"			Exec $HOME/apps/DbVisualizer-8.0.10/dbvis
 
