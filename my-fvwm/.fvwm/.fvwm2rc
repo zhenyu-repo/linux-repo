@@ -86,7 +86,8 @@ Style xmh         NoButton 2
 Style xmag        Icon mag_glass.xpm, ClickToFocus
 Style Firefox-bin Icon firefox.png, ClickToFocus
 Style xmosaic     Color Green/Yellow, ClickToFocus
-#Style *term TitleAtLeft
+Style gnome-terminal TitleAtLeft
+Style Firefox TitleAtLeft
 
 # Close button and event handler on Window title bar
 ButtonStyle 6	17 	20x20@1 30x20@1 50x40@1 70x20@1 80x20@1 80x30@0 60x50@0 80x70@1\
@@ -194,6 +195,8 @@ AddToMenu MenuFvwmUtilities "Utilities" Title
 + %imagemagick.png%"&I. ImageMagick"	Popup MenuImageMagick
 + ""              			Nop
 + "&D. Reset X defaults" 		Exec xrdb -load $HOME/.Xdefaults
++ "&P. xprop"				Exec exec xmessage "`xprop`"
++ "&I. xwininfo"			Exec exec xmessage "`xwininfo`"
 
 # Menu ImageMagick
 DestroyMenu MenuImageMagick
