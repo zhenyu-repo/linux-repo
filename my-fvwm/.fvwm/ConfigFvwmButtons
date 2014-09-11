@@ -1,39 +1,52 @@
 ################## FvwmButtons button-bar ################################
-*----------------*----*----*---*-----------*
-*                *biff*clck*   *           *
-*  FvwmIconMan   *----*----* ^ *   Pager   *
-*                *  xload  *   *           *
-*----------------*----*----*---*-----------*
+
 KillModule FvwmButtons
 DestroyModuleConfig FvwmButtons: *
-*FvwmButtons: Geometry 520x100-100-200
-*FvwmButtons: Back bisque3
-*FvwmButtons: (Frame 2, Padding 2 2, Container(Rows 2 Columns 9 Frame 1 Padding 10 0))
-# Show 5 more desks in a popup panel:
-# Unfortunately, a popup shows the desks 1 to 5, then 0
-*FvwmButtons: (4x2, Frame 2, Swallow "FvwmIconMan" "Module FvwmIconMan")
-*FvwmButtons: (2x2, Frame 0, Container(Rows 2 Columns 2 Frame 0))
-*FvwmButtons: (Frame 2, Swallow(UseOld,NoHints,Respawn) "xbiff" `Exec exec xbiff -bg bisque3`)
-*FvwmButtons: (Frame 3, Swallow(UseOld,NoHints,Respawn) "xclock" `Exec exec xclock -bg bisque3 -fg black -hd black -hl black -padding 0 -update 1`)
-*FvwmButtons: (2x1, Frame 2, Swallow(UseOld,NoHints,Respawn) "xload" `Exec exec xload -bg bisque3 -fg black -update 5 -nolabel`)
+*FvwmButtons: Fore Black
+*FvwmButtons: Back rgb:90/80/90
+*FvwmButtons: Geometry 50x500-135-500
+*FvwmButtons: Rows 20
+*FvwmButtons: Frame 1
+*FvwmButtons: Columns 1
+*FvwmButtons: BoxSize smart
+*FvwmButtons: Font -*-helvetica-medium-r-*-*-12-*
+*FvwmButtons: Padding 0 0
+
+*FvwmButtons: (Title WinOps, Panel (left, delay 0, steps 64) WinOps "Module FvwmButtons -transientpanel WinOps")
+*FvwmButtons: (Title Internet, Panel (left, delay 0, steps 64) Internet "Module FvwmButtons -transientpanel Internet")
+
+*FvwmButtons: (Title Resize, Icon resize.xpm,  Action Resize)
+*FvwmButtons: (Title Move,   Icon arrows2.xpm, Action Move  )
+*FvwmButtons: (Title Lower,  Icon Down,        Action Lower )
+*FvwmButtons: (Title Raise,  Icon Up,          Action Raise )
+*FvwmButtons: (Title Kill,   Icon bomb.xpm,    Action Destroy)
+
+*FvwmButtons: (1x1,Container(Columns 3,Frame 1))
+*FvwmButtons: (Title Dopey ,Action  `Exec "big_win" xterm -T big_win -geometry 80x50 &`)
+*FvwmButtons: (Title Snoopy, Font fixed, Action `Exec "small_win" xterm -T small_win &`)
+*FvwmButtons: (Title google-chrome)
 *FvwmButtons: (End)
-# The 8 pixels in -108 are to account for the frames:
-*FvwmButtons: (1x2, Panel(up, indicator, delay 5000, steps 5, position Root 46 -108p) FvwmPagerSubPanel "Module FvwmPager FvwmPagerSubPanel 1 5")
-*FvwmButtons: (2x2, Frame 2, Swallow(UseOld) "Inline" "Module FvwmPager Inline 0 0")
-*FvwmButtons: (End)
 
-DestroyModuleConfig Inline: *
-*Inline: Rows 1
-*Inline: Columns 1
-DestroyModuleConfig FvwmPagerSubPanel: *
-*FvwmPagerSubPanel: Rows 5
-*FvwmPagerSubPanel: Columns 1
+*FvwmButtons: (Title Xcalc, Icon rcalc.xpm, Action `Exec "Calculator" xcalc &`)
+*FvwmButtons: (Title XMag, Icon magnifying_glass2.xpm, Action `Exec "xmag" xmag &`)
+*FvwmButtons: (Title Mail, Icon mail2.xpm, Action Exec urxvt -e mutt)
 
-# To include the panel in a button
-#DestroyModuleConfig SubPanel 
-#*SubPanel: (1x2, Frame 0, Swallow(UseOld) "FvwmPager" "Module FvwmPager 5 1")
-#*SubPanel: (Icon my_lock.xpm, Action Exec xlock)
-#*SubPanel: (Icon my_move.xpm, Action Move)
+########## PANEL WinOps
+DestroyModuleConfig WinOps: *
+*WinOps: Geometry 200x40-1-1
+*WinOps: Columns 4
+*WinOps: Rows 1
+*WinOps: Frame 1
 
-# Use this command to start it, you also can turn on this feature in .fvwm2rc
-#Module FvwmButtons
+*WinOps: (Title Resize, Icon resize.xpm,  Action Resize)
+*WinOps: (Title Move,   Icon arrows2.xpm, Action Move  )
+*WinOps: (Title Lower,  Icon Down,        Action Lower )
+*WinOps: (Title Raise,  Icon Up,          Action Raise )
+
+########## PANEL Internet
+DestroyModuleConfig Internet: *
+*Internet: Geometry 40x40-1-1
+*Internet: Columns 1
+*Internet: (Title FFox,    Icon firefox_icon.png,    Action Exec firefox)
+
+Module FvwmButtons
