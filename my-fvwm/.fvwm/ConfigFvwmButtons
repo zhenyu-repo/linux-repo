@@ -6,7 +6,7 @@
 *----------------*----*----*---*-----------*
 KillModule FvwmButtons
 DestroyModuleConfig FvwmButtons: *
-*FvwmButtons: Geometry 520x100-1-1
+*FvwmButtons: Geometry 520x100-100-200
 *FvwmButtons: Back bisque3
 *FvwmButtons: (Frame 2, Padding 2 2, Container(Rows 2 Columns 9 Frame 1 Padding 10 0))
 # Show 5 more desks in a popup panel:
@@ -35,5 +35,5 @@ DestroyModuleConfig FvwmPagerSubPanel: *
 #*SubPanel: (Icon my_lock.xpm, Action Exec xlock)
 #*SubPanel: (Icon my_move.xpm, Action Move)
 
-# Use this command to start it:
+# Use this command to start it, you also can turn on this feature in .fvwm2rc
 #Module FvwmButtons

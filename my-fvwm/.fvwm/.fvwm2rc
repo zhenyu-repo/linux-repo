@@ -15,6 +15,7 @@
 #########################################################################
 
 SetEnv FVWM_IMG_PATH $[HOME]/.fvwm/images
+SetEnv WALLPAPER /z/wallpapers
 
 # Icon Path
 ImagePath +:$HOME/.fvwm/decors/newdecors
@@ -65,7 +66,6 @@ Style Xmessage	  NoTitle, NoHandles, BorderWidth 2
 Style Fvwm*       NoTitle,  Sticky, WindowListSkip
 Style Fvwm*       BorderWidth 2, CirculateSkipIcon, CirculateSkip
 
-# StaysOnTop 用于控制是否让Pager置顶 
 Style FvwmPager   StaysOnTop
 Style FvwmPager   NoHandles
 Style FvwmBanner  StaysOnTop
@@ -110,7 +110,10 @@ Key F11		A	N	Maximize	# Press F11 to maximize the window
 
 Key Next	A       SCM     Next [*] Focus
 Key Prior	A       SCM     Prev [*] Focus
-Key Super_L	A	A	Menu MenuFvwmQuitVerify		# Windows Key
+
+# Iconify all windows, Windows key on Windows OS
+Key Super_L	A	A	All (AcceptsFocus CurrentPage !Iconic !Shaded !FvwmTaskBar) Iconify		# Windows Key
+#Key Super_L	A	A	Menu MenuFvwmQuitVerify
 
 Key F1 A M GotoDesk -1		# Press Meta+F1 to switch to previous desk, Meta=ALT on Windows
 Key F2 A M GotoDesk 1		# Press Meta+F2 to switch to next desk, Meta=ALT on Windows
@@ -136,8 +139,9 @@ AddToFunc StartFunction
 + I Module FvwmBanner	
 + I Module FvwmPager 0 1		# Create 2 pagers
 #+ I Module FvwmPager 0 3		# Create 4 pagers
-#+ I Module FvwmButtons			# Disable FvwmButtons module
-#+ I Module FvwmTaskBar			# Taskbar on the bottom
+#+ I Module FvwmButtons
+# Taskbar on the bottom
+#+ I Module FvwmTaskBar
 # 装载墙纸
 #+ I Exec exec xloadimage -onroot -fullscreen ~/.fvwm/images/wallpaper.jpg
 
@@ -161,7 +165,7 @@ AddToMenu MenuFvwmRoot %mini.x.xpm%"Root Menu" Title
 + %firefox_icon.png%"&4. FireFox"	Exec exec firefox
 + %chrome.png%"&5. Google Chrome"	Exec exec chromium-browser
 + "&6. Planner"				Exec exec planner
-+ %nautilus.png%"&7. Nautilus"			Exec exec nautilus --no-desktop
++ %nautilus.png%"&7. Nautilus"		Exec exec nautilus --no-desktop
 + ""              			Nop
 + "&R. Misc"				Popup MenuFvwmMisc
 + "&T. Tools"				Popup MenuFvwmTools
@@ -187,12 +191,20 @@ AddToMenu MenuFvwmUtilities "Utilities" Title
 + "&R. Editres"   			Exec exec editres
 + ""              			Nop
 + "&E. GNU Emacs"    			Exec exec emacs
++ "&I. ImageMagick"			Popup MenuImageMagick
 + ""              			Nop
 + "&D. Reset X defaults" 		Exec xrdb -load $HOME/.Xdefaults
 
+# Menu ImageMagick
+DestroyMenu MenuImageMagick
+AddToMenu MenuImageMagick
++ "&R Capture Region"			Exec import `date +snapshot-%Y-%m-%dT%H%M%S.jpg`
++ "&W Capture Window"			Exec import -frame `date +snapshot-%Y-%m-%dT%H%M%S.jpg`
++ "&F Capture Fullscreen"		Exec import -window root `date +snapshot-%Y-%m-%dT%H%M%S.jpg`
+
 DestroyMenu MenuFvwmConfig
 AddToMenu MenuFvwmConfig "Fvwm Config Ops" Title
-+ "&S. Sloppy Focus"			FuncFvwmFocusPolicyChange SloppyFocus
++ "&S. Sloppy Focus"			FuncFvwmFocusPolicyChangeI SloppyFocus
 + "&C. Click To Focus"			FuncFvwmFocusPolicyChange ClickToFocus
 + "&F. Focus Follows Mouse"		FuncFvwmFocusPolicyChange FocusFollowsMouse
 + ""					Nop
@@ -246,9 +258,7 @@ FuncFvwmWindowCommon MenuFvwmWindowOps2
 # Menu Misc
 DestroyMenu MenuFvwmMisc
 AddToMenu MenuFvwmMisc
-+ %mini.chinese.xpm%"Fcitx"		Exec fcitx
 + "Reset background to black"		Exec xsetroot -solid black
-+ "Kill Fcitx"				Exec killall fcitx
 + "Browse my pictures"			Exec xloadimage $HOME/Pictures/*
 + "MM:)"				Popup HomeDirMenu
 + "Change wallpaper"			Popup MenuWallpaper
@@ -256,7 +266,7 @@ AddToMenu MenuFvwmMisc
 # Menu Wallpaper
 DestroyMenu MenuWallpaper
 AddToMenu MenuWallpaper
-	PipeRead 'for i in /z/wallpapers/*; \
+	PipeRead 'for i in $[WALLPAPER]/*; \
 	do echo "+ $i Exec xloadimage -onroot $i"; done'
 	
 # Menu Tools
