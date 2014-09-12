@@ -147,7 +147,6 @@ AddToFunc StartFunction
 #+ I Exec exec xloadimage -onroot -fullscreen ~/.fvwm/images/wallpaper.jpg
 
 AddToFunc InitFunction
-# 下面用于设置屏幕的颜色，这个会覆盖墙纸的设置
 #+ I exec xsetroot -mod 2 2 -fg rgb:55/40/55 -bg rgb:70/50/70
 + I exec xsetroot -mod 2 2 -fg black -bg black
 + I exec xclock -d -fg red -bg black -update 1 -strftime  %H:%M:%S  -geometry 60x30-250-30 -norender -padding 1
@@ -365,7 +364,6 @@ AddToMenu NewDecors "Decors" Title
 + "Leather"		Function SwitchDecor leather.decor
 + "Marble"		Function SwitchDecor marble.decor
 + "Metal"		Function SwitchDecor metal.decor
-+ "MWM"			Function PlainDecor #cdc7b8 #97715a
 + "Pink Pearl"		Function SwitchDecor pinkpearl.decor
 + "Purple and Silver"	Function SwitchDecor purpsilver.decor
 + "Rainbow"		Function SwitchDecor rainbow.decor
@@ -390,6 +388,7 @@ AddToMenu Fractal-Decors "Fractal Decors" Title
 + "Sunset Flowers"	Function PlainDecor #8a9a8f #3b3d4a
 + "Swimming"		Function PlainDecor #a08895 #684f62
 + "Twist of Fate"	Function PlainDecor #938988 #364147
++ "MWM"			Function PlainDecor #cdc7b8 #97715a
 
 DestroyFunc PlainDecor
 AddToFunc PlainDecor
@@ -398,7 +397,7 @@ AddToFunc PlainDecor
 + I Style * IconTitleColorset
 + I Style * IconBackgroundColorset
 + I Style * HilightIconTitleColorset
-+ I Read $./plain.decor
++ I Read $./decors/newdecors/plain.decor
 
 ######################################
 # Functions
@@ -488,7 +487,4 @@ read ConfigFvwmScroll
 read ConfigFvwmTaskBar
 read ConfigFvwmWinList
 read ConfigFvwmStroke
-
-# Windows XP style
-# read decors/windowdecors/winxp/config
 
