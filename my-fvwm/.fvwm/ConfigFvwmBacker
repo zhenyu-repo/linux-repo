@@ -1,6 +1,18 @@
+# The FvwmBacker module provides functionality to change the background when changing desktops. 
+# Any command can be executed to change the backgrounds. Actually, any arbitrary command can be 
+# sent to fvwm to execute, so you could also do things such as changing window border colors, etc.
+
 DestroyModuleConfig FvwmBacker: *
-*FvwmBacker: Command (Desk 0) -solid steelblue
+*FvwmBacker: Command (Desk 0) -solid black
 *FvwmBacker: Command (Desk 1) -solid midnightblue
 *FvwmBacker: Command (Desk 2) -solid yellow
 *FvwmBacker: Command (Desk 3, Page 0 *) -solid black
 *FvwmBacker: Command (Desk 3, Page 1 *) -solid green
+
+#*FvwmBacker: Command (Desk 0) -solid steelblue
+#*FvwmBacker: Command (Desk 1) -solid midnightblue
+#*FvwmBacker: Command (Desk 2) -solid yellow
+#*FvwmBacker: Command (Desk 3, Page 0 *) -solid black
+#*FvwmBacker: Command (Desk 3, Page 1 *) -solid green
+
+#Module FvwmBacker

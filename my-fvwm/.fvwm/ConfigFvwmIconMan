@@ -3,10 +3,15 @@
 DestroyModuleConfig FvwmIconMan: *
 *FvwmIconMan: numManagers 1
 *FvwmIconMan: Resolution  page
-*FvwmIconMan: background  bisque3
-*FvwmIconMan: foreground  black
+#*FvwmIconMan: background  bisque3
+#*FvwmIconMan: foreground  black
+*FvwmIconMan: background #908090
+*FvwmIconMan: foreground #484048
+
+*FvwmIconMan: DrawIcons true
+
 *FvwmIconMan: font        7x13bold
-*FvwmIconMan: format      "%t"
+*FvwmIconMan: format      "%c: %t"
 *FvwmIconMan: action      Mouse   1 N sendcommand Focus, sendcommand "Iconify"
 *FvwmIconMan: action      Mouse   2 N sendcommand "Iconify 1"
 *FvwmIconMan: action      Mouse   3 N sendcommand "FvwmIdent"
@@ -21,3 +26,6 @@ DestroyModuleConfig FvwmIconMan: *
 #*FvwmIconMan: drawicons true
 *FvwmIconMan: buttongeometry  300x0
 *FvwmIconMan: managergeometry 1x5
+
+# Enable FvwmIconMan
+#Module FvwmIconMan

@@ -1,18 +1,16 @@
 # Use an arrow rather than the `X` cursor on the root window
-# 用箭头作为鼠标指针，而不是默认的X
 CursorStyle root top_left_arrow
 CursorStyle stroke hand2
 
 # some simple default mouse bindings:
 
 # for the root window:
-# root窗口
 Mouse 1 R       A       Menu MenuFvwmRoot Nop
 
-# 按住Alt键并在窗口上单击左键，可以用鼠标移动窗口
+# Press Alt and left click window, then you can move the window
 Mouse 1 W       M       Move
 
-# 按住Alt键并在窗口上点击右键，关闭窗口
+# Press Alt and right click window to close it
 Mouse 3 W       M       Close
 Mouse 2 R       A       Menu MenuFvwmWindowOps Nop
 Mouse 3 R       A       WindowList
@@ -30,10 +28,9 @@ Mouse 2 I       A       Iconify
 Mouse 2 FST     A       Menu MenuFvwmWindowOps2 Nop
 Mouse 3 TSIF    A       RaiseLower
 
+# Press Shift+LeftClick to move the current window to previous desk
+#Mouse 1 A S MoveToDesk -1
 
-# Shift键+鼠标左键，把窗口移到上一个Desk
-Mouse 1 A S MoveToDesk -1
-
-# Shift键+鼠标右键，把窗口移到下一个Desk
-Mouse 3 A S MoveToDesk 1
+# Press Shift+RightClick to move the current window to next desk
+#Mouse 3 A S MoveToDesk 1
 

@@ -15,10 +15,10 @@ Style FvwmButtons !Handles
 *FvwmButtons: Font -*-helvetica-medium-r-*-*-12-*
 *FvwmButtons: Padding 0 0
 
-*FvwmButtons: (Title WinOps, Panel (left, delay 0, steps 64) WinOps "Module FvwmButtons -transientpanel WinOps")
-*FvwmButtons: (Title Internet, Panel (left, delay 0, steps 64) Internet "Module FvwmButtons -transientpanel Internet")
+*FvwmButtons: (Title WinOps, Icon arrow.png Panel (left, delay 0, steps 64) WinOps "Module FvwmButtons -transientpanel WinOps")
+*FvwmButtons: (Title Internet, Icon internet.png Panel (left, delay 0, steps 64) Internet "Module FvwmButtons -transientpanel Internet")
 
-*FvwmButtons: (Title Resize, Icon resize.xpm,  Action Resize)
+*FvwmButtons: (Title Snapshot, Icon xpaint.xpm,  Action Exec import -frame `date +snapshot-%Y-%m-%dT%H%M%S.jpg`)
 *FvwmButtons: (Title Move,   Icon arrows2.xpm, Action Move  )
 *FvwmButtons: (Title Lower,  Icon Down,        Action Lower )
 *FvwmButtons: (Title Raise,  Icon Up,          Action Raise )
@@ -31,7 +31,7 @@ Style FvwmButtons !Handles
 *FvwmButtons: (End)
 
 *FvwmButtons: (Title Xcalc, Icon rcalc.xpm, Action `Exec "Calculator" xcalc &`)
-*FvwmButtons: (Title XMag, Icon magnifying_glass2.xpm, Action `Exec "xmag" xmag &`)
+*FvwmButtons: (Title Nautilus, Icon nautilus.png, Action `Exec nautilus --no-desktop &`)
 *FvwmButtons: (Title Mail, Icon mail2.xpm, Action Exec urxvt -e mutt)
 
 ########## PANEL WinOps
@@ -48,8 +48,10 @@ DestroyModuleConfig WinOps: *
 
 ########## PANEL Internet
 DestroyModuleConfig Internet: *
-*Internet: Geometry 40x40-1-1
-*Internet: Columns 1
+*Internet: Geometry 80x40-1-1
+*Internet: Columns 2
+*Internet: Frame 1
 *Internet: (Title FFox,    Icon firefox_icon.png,    Action Exec firefox)
+*Internet: (Title Chrome,  Icon chrome.png,          Action Exec chromium-browser)
 
 Module FvwmButtons

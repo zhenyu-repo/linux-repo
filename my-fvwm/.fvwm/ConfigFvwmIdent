@@ -4,3 +4,5 @@ DestroyModuleConfig FvwmIdent: *
 *FvwmIdent: Back MidnightBlue
 *FvwmIdent: Fore Yellow
 *FvwmIdent: Font -adobe-helvetica-medium-r-*-*-12-*-*-*-*-*-*-*
+
+#Module FvwmIdent

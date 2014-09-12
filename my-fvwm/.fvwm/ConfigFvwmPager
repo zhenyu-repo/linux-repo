@@ -5,33 +5,32 @@ DestroyModuleConfig FvwmPager: *
 *FvwmPager: Rows 1
 *FvwmPager: Back #908090
 *FvwmPager: Fore #484048
-*FvwmPager: Font -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
+#*FvwmPager: Font -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
 
-# turn off desktop names for swallowing in above button bar example:
-# 控制是否显示桌面的名字
+# Turn off desktop names for swallowing in above button bar example:
 #*FvwmPager: Font none
 
 *FvwmPager: Hilight #cab3ca
-# Pager的位置
 *FvwmPager: Geometry -0-28
-# Pager图标化后的位置
+# Specifies a size (optional) and location (optional) for the pager's icon window
+# i.e. the location of icon when it's iconified
 #*FvwmPager: IconGeometry -0+0
-# Pager的标识
+# Pager label
 *FvwmPager: Label 0 Earth
 *FvwmPager: Label 1 Mars
 *FvwmPager: Label 2 Moon
 *FvwmPager: Label 3 Venus
 
-# 每个Desk在Pager中背景色
+# Bgcolor of each desk in pager
 #*FvwmPager: DeskColor 0 red
 #*FvwmPager: DeskColor 1 blue
 #*FvwmPager: DeskColor 1 blue
 #*FvwmPager: DeskColor 1 blue
 
-# 把Label的标识放在Pager标识的上面或者下面
+# Draw desk labels above/below the corresponding desk
 #*FvwmPager: LabelsAbove
 #*FvwmPager: LabelsBelow
-# 只显示当前桌面的Label
+# Hide the labels of all but the current desk
 #*FvwmPager: ShapeLabels
 
 #*FvwmPager: SmallFont 5x8
@@ -43,6 +42,6 @@ DestroyModuleConfig FvwmPager: *
 *FvwmPager: BalloonBorderWidth  1
 *FvwmPager: BalloonBorderColor  Black
 
-# 是否在Pager面板上显示程序的小图标
+# Display a window's mini icon in the pager
 #*FvwmPager: MiniIcons
 

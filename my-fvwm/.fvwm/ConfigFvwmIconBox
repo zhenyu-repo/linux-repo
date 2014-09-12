@@ -43,3 +43,5 @@ DestroyModuleConfig FvwmIconBox: *
 # reads icon files specified in Style commands.
 #
 #*FvwmIconBox:             "Fvwm*"         -
+
+# Module FvwmIconBox
