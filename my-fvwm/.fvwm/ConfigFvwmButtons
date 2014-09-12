@@ -2,6 +2,9 @@
 
 KillModule FvwmButtons
 DestroyModuleConfig FvwmButtons: *
+
+Style FvwmButtons !Handles
+
 *FvwmButtons: Fore Black
 *FvwmButtons: Back rgb:90/80/90
 *FvwmButtons: Geometry 50x500-135-500

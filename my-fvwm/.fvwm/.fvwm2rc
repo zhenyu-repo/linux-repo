@@ -17,7 +17,7 @@
 SetEnv FVWM_IMG_PATH $[HOME]/.fvwm/images
 SetEnv WALLPAPER /z/wallpapers
 
-# Icon Path
+# Icon and Image Path
 ImagePath +:$HOME/.fvwm/decors/newdecors
 ImagePath +:$HOME/.fvwm/icons:/usr/share/icons:/usr/share/pixmaps
 ImagePath +:$HOME/.fvwm/decors/windowdecors/winxp/images
@@ -53,41 +53,41 @@ MenuStyle * PopupDelayed, PopupDelay 160, Animation, TitleWarp
 Style * HilightFore black, HilightBack gray30
 
 # HandleWidth define handle width of windows
-Style * BorderWidth 7, HandleWidth 3
-Style *           Icon unknown1.xpm, Color lightgrey/dimgrey
-Style *           MWMFunctions, MWMDecor, HintOverride
-Style *           DecorateTransient, NoPPosition
-Style *           IconBox 0 -10 -280 -1
-Style *           FocusFollowsMouse
-Style *           TileCascadePlacement
+Style * 		BorderWidth 7, HandleWidth 3
+Style *			Icon unknown1.xpm, Color lightgrey/dimgrey
+Style *			MWMFunctions, MWMDecor, HintOverride
+Style *			DecorateTransient, NoPPosition
+Style *			IconBox 0 -10 -280 -1
+Style *			FocusFollowsMouse
+Style *			TileCascadePlacement
 
 # Styles for various Fvwm modules:
-Style Xmessage	  NoTitle, NoHandles, BorderWidth 2
-Style Fvwm*       NoTitle,  Sticky, WindowListSkip
-Style Fvwm*       BorderWidth 2, CirculateSkipIcon, CirculateSkip
+Style Xmessage		NoTitle, NoHandles, BorderWidth 2
+Style Fvwm*		NoTitle,  Sticky, WindowListSkip
+Style Fvwm*		BorderWidth 2, CirculateSkipIcon, CirculateSkip
 
-Style FvwmPager   StaysOnTop
-Style FvwmPager   NoHandles
-Style FvwmBanner  StaysOnTop
-Style FvwmButtons Icon toolbox.xpm, ClickToFocus
+Style FvwmPager		StaysOnTop
+Style FvwmPager		NoHandles
+Style FvwmBanner	StaysOnTop
+Style FvwmButtons	Icon toolbox.xpm, ClickToFocus
 
 # Styles for your common terminal emulator programs.
 # xterms and rxvts in a separate icon box:
-Style XTerm			Icon xterm.xpm, SloppyFocus, IconBox -70 1 -1 -140
-Style urxvt        	Icon term.xpm, SloppyFocus, IconBox -70 1 -1 -140
-Style urxvt        	MWMBorder, MWMButtons
-					
+Style XTerm		Icon xterm.xpm, SloppyFocus, IconBox -70 1 -1 -140
+Style urxvt		Icon term.xpm, SloppyFocus, IconBox -70 1 -1 -140
+Style urxvt		MWMBorder, MWMButtons
+
 # Styles for various common programs:
-Style *clock      NoTitle, NoHandles, Sticky, WindowListSkip, ClickToFocus, BorderWidth 0
-Style xbiff       NoTitle, Sticky, WindowListSkip, ClickToFocus
-Style xcalc       Icon calculator.png, NoButton 2,ClickToFocus
-Style xmh         Icon mail1.xpm, NoIconTitle,StickyIcon
-Style xmh         NoButton 2
-Style xmag        Icon mag_glass.xpm, ClickToFocus
-Style Firefox-bin Icon firefox.png, ClickToFocus
-Style xmosaic     Color Green/Yellow, ClickToFocus
-Style gnome-terminal TitleAtLeft
-Style Firefox TitleAtLeft
+Style *lock		NoTitle, NoHandles, Sticky, WindowListSkip, ClickToFocus, BorderWidth 0
+Style xbiff		NoTitle, Sticky, WindowListSkip, ClickToFocus
+Style xcalc		Icon calculator.png, NoButton 2,ClickToFocus
+Style xmh		Icon mail1.xpm, NoIconTitle,StickyIcon
+Style xmh		NoButton 2
+Style xmag		Icon mag_glass.xpm, ClickToFocus
+Style Firefox-bin	Icon firefox.png, ClickToFocus
+Style xmosaic		Color Green/Yellow, ClickToFocus
+Style gnome-terminal	TitleAtLeft
+Style Firefox		TitleAtLeft
 
 # Close button and event handler on Window title bar
 ButtonStyle 6	17 	20x20@1 30x20@1 50x40@1 70x20@1 80x20@1 80x30@0 60x50@0 80x70@1\
@@ -113,7 +113,7 @@ Key Next	A       SCM     Next [*] Focus
 Key Prior	A       SCM     Prev [*] Focus
 
 # Iconify all windows, Windows key on Windows OS
-Key Super_L	A	A	All (AcceptsFocus CurrentPage !Iconic !Shaded !FvwmTaskBar) Iconify		# Windows Key
+Key Super_L	A	A	All (AcceptsFocus CurrentPage !Iconic !Shaded !FvwmTaskBar) Iconify
 #Key Super_L	A	A	Menu MenuFvwmQuitVerify
 
 Key F1 A M GotoDesk -1		# Press Meta+F1 to switch to previous desk, Meta=ALT on Windows
@@ -137,7 +137,7 @@ AddToFunc StartFunction
 + I Module FvwmAnimate
 
 # Display logo for 3 seconds, comments can't be put at the end of below line, maybe this is a bug
-+ I Module FvwmBanner	
++ I Module FvwmBanner
 + I Module FvwmPager 0 1		# Create 2 pagers
 #+ I Module FvwmPager 0 3		# Create 4 pagers
 #+ I Module FvwmButtons
@@ -168,33 +168,33 @@ AddToMenu MenuFvwmRoot %mini.x.xpm%"Root Menu" Title
 + %chrome.png%"&5. Google Chrome"	Exec exec chromium-browser
 + "&6. Planner"				Exec exec planner
 + %nautilus.png%"&7. Nautilus"		Exec exec nautilus --no-desktop
-+ ""              			Nop
++ ""					Nop
 + "&R. Misc"				Popup MenuFvwmMisc
 + "&T. Tools"				Popup MenuFvwmTools
-+ ""              			Nop
++ ""					Nop
 + "&U. Utilities"			Popup MenuFvwmUtilities
-+ ""              			Nop
-+ "&M. Fvwm Modules"      		Popup MenuFvwmModules
++ ""					Nop
++ "&M. Fvwm Modules"			Popup MenuFvwmModules
 + "&D. Decors"				Popup NewDecors
 + "&W. Fvwm Window Ops"   		Popup MenuFvwmWindowOps
 + "&S. Fvwm Config Ops"   		Popup MenuFvwmConfig
-+ ""              			Nop
++ ""					Nop
 + "&F. Refresh Screen"			Refresh
 + "&C. Recapture Screen"		Recapture
-+ ""              			Nop
++ ""					Nop
 + %exit.png%"&X. Exit Fvwm" 		Popup MenuFvwmQuitVerify
 
 DestroyMenu MenuFvwmUtilities
 AddToMenu MenuFvwmUtilities "Utilities" Title
-+ "&T. Top"       			Exec exec xterm -T Top -n Top -e top
++ "&T. Top"				Exec exec xterm -T Top -n Top -e top
 + %mini.calc.xpm%"&C. Calculator" 	Exec exec xcalc
 + "&K. Clock"				Exec exec xclock -norender -digital -update 1 -geometry 240x40-0+0  -fg green -bg black
-+ "&G. Xmag"      			Exec exec xmag
-+ "&R. Editres"   			Exec exec editres
-+ ""              			Nop
-+ "&E. GNU Emacs"    			Exec exec emacs
++ "&G. Xmag"				Exec exec xmag
++ "&R. Editres"				Exec exec editres
++ ""					Nop
++ "&E. GNU Emacs"			Exec exec emacs
 + %imagemagick.png%"&I. ImageMagick"	Popup MenuImageMagick
-+ ""              			Nop
++ ""					Nop
 + "&D. Reset X defaults" 		Exec xrdb -load $HOME/.Xdefaults
 + "&P. xprop"				Exec exec xmessage "`xprop`"
 + "&I. xwininfo"			Exec exec xmessage "`xwininfo`"
@@ -244,7 +244,7 @@ AddToFunc FuncFvwmWindowCommon
 # mouse 2 on root
 # Root menu
 DestroyMenu MenuFvwmWindowOps
-AddToMenu MenuFvwmWindowOps     "Window Ops"    Title
+AddToMenu MenuFvwmWindowOps "Window Ops" Title
 FuncFvwmWindowCommon MenuFvwmWindowOps
 + "Re&fresh Window" RefreshWindow
 
@@ -254,9 +254,9 @@ FuncFvwmWindowCommon MenuFvwmWindowOps
 DestroyMenu MenuFvwmWindowOps2
 AddToMenu MenuFvwmWindowOps2
 FuncFvwmWindowCommon MenuFvwmWindowOps2
-+ Scroll&Bar       Module FvwmScroll 2 2
-+ &Print           FuncFvwmPrint
-+ "Print Re&verse" FuncFvwmPrintReverse
++ Scroll&Bar		Module FvwmScroll 2 2
++ &Print		FuncFvwmPrint
++ "Print Re&verse"	FuncFvwmPrintReverse
 
 
 # Menu Misc
