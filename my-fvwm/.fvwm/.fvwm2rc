@@ -342,53 +342,54 @@ AddToMenu MenuFvwmQuitVerify "Really Quit Fvwm?" Title
 + "&T. Start twm"			Restart twm
 + "&X. Just an Xterm"			Restart xterm -n '"X Console"' -T '"X Console"'
 
-
-# 改变窗口的装饰风格	
-DestroyFunc SwitchDecor                         
-AddToFunc SwitchDecor                                                           + I Style * IconTitleColorset
-+ I Style * HilightIconTitleColorset            
-+ I Style * IconBackgroundColorset          
+# Switch decors
+DestroyFunc SwitchDecor
+AddToFunc SwitchDecor
++ I Style * IconTitleColorset
++ I Style * HilightIconTitleColorset
++ I Style * IconBackgroundColorset
 + I Read $./decors/newdecors/$0
 
-# 风格菜单
+# Menu SwitchDecors
 DestroyMenu NewDecors
 AddToMenu NewDecors "Decors" Title
-+       "ABC"           Function SwitchDecor abc.decor
-+       "Apple Aqua"    Function SwitchDecor aqua.decor
-+       "BlueGray"      Function SwitchDecor bluegray.decor
-+       "Blue Wing"     Function SwitchDecor blue_wing.decor
-+       "Celtic"        Function SwitchDecor celtic.decor
-+       "Default"       Function SwitchDecor default.decor
-+       "Emerald"       Function SwitchDecor emerald.decor
-+       "Glass"         Function SwitchDecor glass.decor
-+       "Gold Leaf"     Function SwitchDecor goldleaf.decor
-+       "Leather"       Function SwitchDecor leather.decor
-+       "Marble"        Function SwitchDecor marble.decor
-+       "Metal"         Function SwitchDecor metal.decor
-+       "MWM"           Function PlainDecor #cdc7b8 #97715a
-+       "Pink Pearl"    Function SwitchDecor pinkpearl.decor
-+       "Purple and Silver"  Function SwitchDecor purpsilver.decor
-+       "Rainbow"       Function SwitchDecor rainbow.decor
-+       "Red and Gold"  Function SwitchDecor redgold.decor
-+       "Silver"        Function SwitchDecor silver.decor
-+       "Simple"        Function SwitchDecor simple.decor
-+       "Springtime"    Function SwitchDecor springtime.decor
-+       "Starry"        Function SwitchDecor starry.decor
-+       "Stone Age"     Function SwitchDecor stoneage.decor
-+       "Water"         Function SwitchDecor water.decor
-+       "Wine"          Function SwitchDecor wine.decor
-+       "Wood"          Function SwitchDecor wood.decor
-+       "Plain Decors"        Popup Fractal-Decors
++ "ABC"			Function SwitchDecor abc.decor
++ "Apple Aqua"		Function SwitchDecor aqua.decor
++ "BlueGray"		Function SwitchDecor bluegray.decor
++ "Blue Wing"		Function SwitchDecor blue_wing.decor
++ "Celtic"		Function SwitchDecor celtic.decor
++ "Default"		Function SwitchDecor default.decor
++ "Emerald"		Function SwitchDecor emerald.decor
++ "Glass"		Function SwitchDecor glass.decor
++ "Gold Leaf"		Function SwitchDecor goldleaf.decor
++ "Leather"		Function SwitchDecor leather.decor
++ "Marble"		Function SwitchDecor marble.decor
++ "Metal"		Function SwitchDecor metal.decor
++ "MWM"			Function PlainDecor #cdc7b8 #97715a
++ "Pink Pearl"		Function SwitchDecor pinkpearl.decor
++ "Purple and Silver"	Function SwitchDecor purpsilver.decor
++ "Rainbow"		Function SwitchDecor rainbow.decor
++ "Red and Gold"	Function SwitchDecor redgold.decor
++ "Silver"		Function SwitchDecor silver.decor
++ "Simple"		Function SwitchDecor simple.decor
++ "Springtime"		Function SwitchDecor springtime.decor
++ "Starry"		Function SwitchDecor starry.decor
++ "Stone Age"		Function SwitchDecor stoneage.decor
++ "Water"		Function SwitchDecor water.decor
++ "Wine"		Function SwitchDecor wine.decor
++ "Wood"		Function SwitchDecor wood.decor
++ "WinXP"		Function SwitchDecor winxp.decor
++ "Plain Decors"	Popup Fractal-Decors
 
 DestroyMenu Fractal-Decors
 AddToMenu Fractal-Decors "Fractal Decors" Title
-+       "Circled Vine"   Function PlainDecor #847383 #403b5b
-+       "Fanar"          Function PlainDecor #cdc7b8 #97715a
-+       "Old Lace"       Function PlainDecor #b197a2 #f7eecf
-+       "Startdust"      Function PlainDecor #8c95b4 #3d3571
-+       "Sunset Flowers" Function PlainDecor #8a9a8f #3b3d4a
-+       "Swimming"       Function PlainDecor #a08895 #684f62
-+       "Twist of Fate"  Function PlainDecor #938988 #364147
++ "Circled Vine"	Function PlainDecor #847383 #403b5b
++ "Fanar"		Function PlainDecor #cdc7b8 #97715a
++ "Old Lace"		Function PlainDecor #b197a2 #f7eecf
++ "Startdust"		Function PlainDecor #8c95b4 #3d3571
++ "Sunset Flowers"	Function PlainDecor #8a9a8f #3b3d4a
++ "Swimming"		Function PlainDecor #a08895 #684f62
++ "Twist of Fate"	Function PlainDecor #938988 #364147
 
 DestroyFunc PlainDecor
 AddToFunc PlainDecor
