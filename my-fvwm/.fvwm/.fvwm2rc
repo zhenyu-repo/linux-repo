@@ -261,10 +261,9 @@ FuncFvwmWindowCommon MenuFvwmWindowOps2
 # Menu Misc
 DestroyMenu MenuFvwmMisc
 AddToMenu MenuFvwmMisc
-+ "Reset background to black"		Exec xsetroot -solid black
-+ "Browse my pictures"			Exec xloadimage $HOME/Pictures/*
-+ "MM:)"				Popup HomeDirMenu
-+ "Change wallpaper"			Popup MenuWallpaper
++ "&Reset background to black"		Exec xsetroot -solid black
++ "&Browse my pictures"			Exec xloadimage $HOME/Pictures/*
++ "&Change wallpaper"			Popup MenuWallpaper
 
 # Menu Wallpaper
 DestroyMenu MenuWallpaper
@@ -279,12 +278,7 @@ AddToMenu MenuFvwmTools
 + "&Eclipse"				Exec $HOME/apps/eclipse/eclipse
 + "&DbVisualizer"			Exec $HOME/apps/DbVisualizer-8.0.10/dbvis
 + "&Meld"				Exec meld
-
-
-DestroyMenu HomeDirMenu
-AddToMenu HomeDirMenu
-	PipeRead 'for i in $HOME/picture/mm/*; \
-	do echo "+ $i Exec xloadimage $i"; done'
++ "&GNU Emacs"				Exec emacs
 
 DestroyMenu MenuFvwmModules
 AddToMenu MenuFvwmModules "Fvwm Modules"        Title
