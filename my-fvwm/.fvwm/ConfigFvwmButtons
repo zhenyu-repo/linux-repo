@@ -19,7 +19,7 @@ Style FvwmButtons !Handles
 *FvwmButtons: (Title Internet, Icon internet.png Panel (left, delay 0, steps 64) Internet "Module FvwmButtons -transientpanel Internet")
 
 *FvwmButtons: (Title Snapshot, Icon xpaint.xpm,  Action Exec import -frame `date +snapshot-%Y-%m-%dT%H%M%S.jpg`)
-*FvwmButtons: (Title Move,   Icon arrows2.xpm, Action Move  )
+*FvwmButtons: (Title GEdit,  Icon edit.xpm, Action Exec gedit  )
 *FvwmButtons: (Title Lower,  Icon Down,        Action Lower )
 *FvwmButtons: (Title Raise,  Icon Up,          Action Raise )
 *FvwmButtons: (Title Kill,   Icon bomb.xpm,    Action Destroy)

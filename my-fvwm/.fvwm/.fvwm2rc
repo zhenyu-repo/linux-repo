@@ -165,7 +165,7 @@ AddToMenu MenuFvwmRoot %mini.x.xpm%"Root Menu" Title
 + %gterm.png%"&3. GTerm"		Exec exec gnome-terminal
 + %firefox_icon.png%"&4. FireFox"	Exec exec firefox
 + %chrome.png%"&5. Google Chrome"	Exec exec chromium-browser
-+ "&6. Planner"				Exec exec planner
++ "&6. XNC"				Exec exec xnc
 + %nautilus.png%"&7. Nautilus"		Exec exec nautilus --no-desktop
 + ""					Nop
 + "&R. Misc"				Popup MenuFvwmMisc
@@ -279,6 +279,9 @@ AddToMenu MenuFvwmTools
 + "&DbVisualizer"			Exec $HOME/apps/DbVisualizer-8.0.10/dbvis
 + "&Meld"				Exec meld
 + "&GNU Emacs"				Exec emacs
++ "&XEmacs"				Exec xemacs
++ "D&ia"				Exec dia
++ "&Planner"				Exec planner
 
 DestroyMenu MenuFvwmModules
 AddToMenu MenuFvwmModules "Fvwm Modules"        Title
