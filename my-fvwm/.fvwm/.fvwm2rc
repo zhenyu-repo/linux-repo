@@ -278,6 +278,7 @@ AddToMenu MenuFvwmTools
 + %gimp.png%"&Gimp"			Exec gimp
 + "&Eclipse"				Exec $HOME/apps/eclipse/eclipse
 + "&DbVisualizer"			Exec $HOME/apps/DbVisualizer-8.0.10/dbvis
++ "&Meld"				Exec meld
 
 
 DestroyMenu HomeDirMenu

@@ -66,6 +66,7 @@ xterm*reverse*Wrap:     on
 xterm.ReverseWrap:      on
 xterm*saveLines:        2000
 xterm*scrollBar:        on
+xterm*scrollbar*thickness: 5
 xterm*titlebar:         on
 xterm*visualBell:       on
 xterm.ActiveIcon:       on
