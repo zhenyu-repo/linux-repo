@@ -15,14 +15,14 @@ Style FvwmButtons !Handles
 *FvwmButtons: Font -*-helvetica-medium-r-*-*-12-*
 *FvwmButtons: Padding 0 0
 
-*FvwmButtons: (Title WinOps, Icon arrow.png Panel (left, delay 0, steps 64) WinOps "Module FvwmButtons -transientpanel WinOps")
+*FvwmButtons: (Title WinOps, Icon mini.windows.xpm Panel (left, delay 0, steps 64) WinOps "Module FvwmButtons -transientpanel WinOps")
 *FvwmButtons: (Title Internet, Icon internet.png Panel (left, delay 0, steps 64) Internet "Module FvwmButtons -transientpanel Internet")
 
-*FvwmButtons: (Title Snapshot, Icon xpaint.xpm,  Action Exec import -frame `date +snapshot-%Y-%m-%dT%H%M%S.jpg`)
-*FvwmButtons: (Title GEdit,  Icon edit.xpm, Action Exec gedit  )
-*FvwmButtons: (Title Lower,  Icon Down,        Action Lower )
-*FvwmButtons: (Title Raise,  Icon Up,          Action Raise )
-*FvwmButtons: (Title Kill,   Icon bomb.xpm,    Action Destroy)
+*FvwmButtons: (Title Snapshot,	Icon camera.png,	Action FuncCaptureWindow )
+*FvwmButtons: (Title GEdit,	Icon text-editor.png,	Action Exec gedit  )
+*FvwmButtons: (Title Lower,	Icon Down,		Action Lower )
+*FvwmButtons: (Title Raise,	Icon Up,		Action Raise )
+*FvwmButtons: (Title Kill,	Icon mini.bomb2.xpm,	Action Destroy)
 
 *FvwmButtons: (1x1,Container(Columns 3,Frame 1))
 *FvwmButtons: (Title Dopey ,Action  `Exec "big_win" xterm -T big_win -geometry 80x50 &`)
@@ -30,9 +30,9 @@ Style FvwmButtons !Handles
 *FvwmButtons: (Title google-chrome)
 *FvwmButtons: (End)
 
-*FvwmButtons: (Title Xcalc, Icon rcalc.xpm, Action `Exec "Calculator" xcalc &`)
+*FvwmButtons: (Title Xcalc, Icon mini.calc.xpm, Action `Exec "Calculator" xcalc &`)
 *FvwmButtons: (Title Nautilus, Icon nautilus.png, Action `Exec nautilus --no-desktop &`)
-*FvwmButtons: (Title Mail, Icon mail2.xpm, Action Exec urxvt -e mutt)
+*FvwmButtons: (Title Mutt, Icon mutt2.png, Action Exec urxvt -e mutt)
 
 ########## PANEL WinOps
 DestroyModuleConfig WinOps: *
@@ -41,10 +41,10 @@ DestroyModuleConfig WinOps: *
 *WinOps: Rows 1
 *WinOps: Frame 1
 
-*WinOps: (Title Resize, Icon resize.xpm,  Action Resize)
-*WinOps: (Title Move,   Icon arrows2.xpm, Action Move  )
-*WinOps: (Title Lower,  Icon Down,        Action Lower )
-*WinOps: (Title Raise,  Icon Up,          Action Raise )
+*WinOps: (Title Resize,	Icon mini.resize3.xpm,		Action Resize)
+*WinOps: (Title Move,	Icon mini.move2.xpm, 		Action Move  )
+*WinOps: (Title Lower,	Icon mini.lower2.xpm,		Action Lower )
+*WinOps: (Title Raise,  Icon mini.raise2.xpm,		Action Raise )
 
 ########## PANEL Internet
 DestroyModuleConfig Internet: *
@@ -55,3 +55,4 @@ DestroyModuleConfig Internet: *
 *Internet: (Title Chrome,  Icon chrome.png,          Action Exec chromium-browser)
 
 Module FvwmButtons
+

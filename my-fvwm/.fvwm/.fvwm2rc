@@ -19,10 +19,11 @@ SetEnv WALLPAPER /z/wallpapers
 
 # Icon and Image Path
 ImagePath +:$HOME/.fvwm/decors/newdecors
-ImagePath +:$HOME/.fvwm/icons:/usr/share/icons:/usr/share/pixmaps
 ImagePath +:$HOME/.fvwm/decors/windowdecors/winxp/images
 ImagePath +:$HOME/.fvwm/icons/fvwm-icons
-ImagePath +:$HOME/.fvwm/icons/app-icons
+ImagePath +:$HOME/.fvwm/icons/icon-repo
+ImagePath +:$HOME/.fvwm/icons/mutt
+ImagePath +:$HOME/.fvwm/icons:/usr/share/icons:/usr/share/pixmaps
 
 # Misc
 EdgeResistance 250 100
@@ -164,13 +165,13 @@ AddToMenu MenuFvwmRoot %mini.x.xpm%"Root Menu" Title
 + %fvwm_console.png%"&2. Rxvt"		Exec exec urxvt 
 + %gterm.png%"&3. GTerm"		Exec exec gnome-terminal
 + %firefox_icon.png%"&4. FireFox"	Exec exec firefox
-+ %chrome.png%"&5. Google Chrome"	Exec exec chromium-browser
++ %chromium.png%"&5. Google Chrome"	Exec exec chromium-browser
 + "&6. XNC"				Exec exec xnc
 + %nautilus.png%"&7. Nautilus"		Exec exec nautilus --no-desktop
 + ""					Nop
 + "&R. Misc"				Popup MenuFvwmMisc
++ "&Y. System"				Popup MenuFvwmSystem
 + "&T. Tools"				Popup MenuFvwmTools
-+ ""					Nop
 + "&U. Utilities"			Popup MenuFvwmUtilities
 + ""					Nop
 + "&M. Fvwm Modules"			Popup MenuFvwmModules
@@ -187,7 +188,7 @@ DestroyMenu MenuFvwmUtilities
 AddToMenu MenuFvwmUtilities "Utilities" Title
 + "&T. Top"				Exec exec xterm -T Top -n Top -e top
 + %mini.calc.xpm%"&C. Calculator" 	Exec exec xcalc
-+ "&K. Clock"				Exec exec xclock -norender -digital -update 1 -geometry 240x40-0+0  -fg green -bg black
++ %mini.clock.xpm%"&K. Clock"		Exec exec xclock -norender -digital -update 1 -geometry 240x40-0+0  -fg green -bg black
 + "&G. Xmag"				Exec exec xmag
 + "&R. Editres"				Exec exec editres
 + ""					Nop
@@ -202,7 +203,7 @@ AddToMenu MenuFvwmUtilities "Utilities" Title
 DestroyMenu MenuImageMagick
 AddToMenu MenuImageMagick
 + "&R Capture Region"			Exec import `date +snapshot-%Y-%m-%dT%H%M%S.jpg`
-+ "&W Capture Window"			Exec import -frame `date +snapshot-%Y-%m-%dT%H%M%S.jpg`
++ "&W Capture Window"			FuncCaptureWindow
 + "&F Capture Fullscreen"		Exec import -window root `date +snapshot-%Y-%m-%dT%H%M%S.jpg`
 
 DestroyMenu MenuFvwmConfig
@@ -226,18 +227,18 @@ AddToMenu MenuFvwmConfig "Fvwm Config Ops" Title
 # things.  Here is the "common" part:
 DestroyFunc FuncFvwmWindowCommon
 AddToFunc FuncFvwmWindowCommon
-+ I AddToMenu $0 &Move			Move
-+ I AddToMenu $0 &Resize		Resize
-+ I AddToMenu $0 R&aise			Raise
-+ I AddToMenu $0 &Lower			Lower
-+ I AddToMenu $0 (De)&Iconify		Iconify
-+ I AddToMenu $0 (Un)&Stick		Stick
-+ I AddToMenu $0 (Un)Ma&ximize		Maximize
-+ I AddToMenu $0 ""			Nop
-+ I AddToMenu $0 &Delete		Delete
-+ I AddToMenu $0 %mini.cross.xpm%&Close	Close
-+ I AddToMenu $0 Destroy		Destroy
-+ I AddToMenu $0 ""			Nop
++ I AddToMenu $0 %mini.move2.xpm%&Move		Move
++ I AddToMenu $0 %mini.resize3.xpm%&Resize	Resize
++ I AddToMenu $0 %mini.raise2.xpm%R&aise	Raise
++ I AddToMenu $0 %mini.lower2.xpm%&Lower	Lower
++ I AddToMenu $0 (De)&Iconify			Iconify
++ I AddToMenu $0 (Un)&Stick			Stick
++ I AddToMenu $0 (Un)Ma&ximize			Maximize
++ I AddToMenu $0 ""				Nop
++ I AddToMenu $0 &Delete			Delete
++ I AddToMenu $0 %mini.cross.xpm%&Close		Close
++ I AddToMenu $0 Destroy			Destroy
++ I AddToMenu $0 ""				Nop
 
 # First windowops menu, bound to:
 # mouse 2 on root
@@ -261,9 +262,14 @@ FuncFvwmWindowCommon MenuFvwmWindowOps2
 # Menu Misc
 DestroyMenu MenuFvwmMisc
 AddToMenu MenuFvwmMisc
-+ "&Reset background to black"		Exec xsetroot -solid black
 + "&Browse my pictures"			Exec xloadimage $HOME/Pictures/*
+
+# Menu System
+DestroyMenu MenuFvwmSystem
+AddToMenu MenuFvwmSystem
++ "&Reset background to black"		Exec xsetroot -solid black
 + "&Change wallpaper"			Popup MenuWallpaper
++ %audio-volume.png%"&AlsaMixer"	Exec xterm -e alsamixer
 
 # Menu Wallpaper
 DestroyMenu MenuWallpaper
@@ -280,8 +286,8 @@ AddToMenu MenuFvwmTools
 + "&Meld"				Exec meld
 + "&GNU Emacs"				Exec emacs
 + "&XEmacs"				Exec xemacs
-+ "D&ia"				Exec dia
-+ "&Planner"				Exec planner
++ %dia.png%"D&ia"			Exec dia
++ %gnome-planner.png%"&Planner"		Exec planner
 
 DestroyMenu MenuFvwmModules
 AddToMenu MenuFvwmModules "Fvwm Modules"        Title
@@ -328,15 +334,15 @@ AddToMenu MenuFvwmForms
 DestroyFunc FuncFvwmConfigureIconBox
 AddToFunc FuncFvwmConfigureIconBox
 + I Module FvwmIconBox
-+ I Style     *  NoIcon
++ I Style * NoIcon
 
 DestroyMenu MenuFvwmQuitVerify
 AddToMenu MenuFvwmQuitVerify "Really Quit Fvwm?" Title
-+ "&L. Just Lock"	 		Exec xscreensaver-command -lock
++ "&L. Just Lock"			Exec xscreensaver-command -lock
 + %exit.png%"&Q. Yes, Really Quit"	Quit
 + "&N. No, Don't Quit"			Nop
-+ "&R. Restart"				Restart
-+ "&T. Start twm"			Restart twm
++ %system-reboot.png%"&R. Restart"	Restart
++ "%mini.twm.xpm%&T. Start twm"		Restart twm
 + "&X. Just an Xterm"			Restart xterm -n '"X Console"' -T '"X Console"'
 
 # Switch decors
@@ -400,6 +406,10 @@ AddToFunc PlainDecor
 ######################################
 # Functions
 ######################################
+DestroyFunc FuncCaptureWindow
+AddToFunc FuncCaptureWindow
++ I Exec import -frame `date +snapshot-%Y-%m-%dT%H%M%S.jpg`
+
 ##############自动隐藏的函数#################
 DestroyFunc FuncAutoEnter
 AddToFunc FuncAutoEnter
