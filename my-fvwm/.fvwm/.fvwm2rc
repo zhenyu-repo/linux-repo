@@ -19,7 +19,6 @@ SetEnv WALLPAPER /z/wallpapers
 
 # Icon and Image Path
 ImagePath +:$HOME/.fvwm/decors/newdecors
-ImagePath +:$HOME/.fvwm/decors/windowdecors/winxp/images
 ImagePath +:$HOME/.fvwm/icons/fvwm-icons
 ImagePath +:$HOME/.fvwm/icons/icon-repo
 ImagePath +:$HOME/.fvwm/icons/mutt
@@ -106,7 +105,7 @@ Style * SnapAttraction 15
 # Key Bindings
 ######################################
 Key F1		A	N	Iconify		# Press F1 to minimize the window
-Key F2		A	N	RaiseLower	# Press F2 to change the Z-index of the window
+#Key F2		A	N	RaiseLower	# Press F2 to change the Z-index of the window
 Key F4		A	M	Close		# Press alt+F4 to close the window
 Key F11		A	N	Maximize	# Press F11 to maximize the window
 
@@ -281,10 +280,10 @@ AddToMenu MenuWallpaper
 DestroyMenu MenuFvwmTools
 AddToMenu MenuFvwmTools
 + %gimp.png%"&Gimp"			Exec gimp
-+ "&Eclipse"				Exec $HOME/apps/eclipse/eclipse
++ %eclipse.png%"&Eclipse"		Exec $HOME/apps/eclipse/eclipse
 + "&DbVisualizer"			Exec $HOME/apps/DbVisualizer-8.0.10/dbvis
 + "&Meld"				Exec meld
-+ "&GNU Emacs"				Exec emacs
++ %emacs-2.png%"&GNU Emacs"		Exec emacs
 + "&XEmacs"				Exec xemacs
 + %dia.png%"D&ia"			Exec dia
 + %gnome-planner.png%"&Planner"		Exec planner
