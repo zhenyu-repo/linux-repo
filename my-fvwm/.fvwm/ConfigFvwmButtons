@@ -37,9 +37,9 @@ Style FvwmButtons !Handles
 
 ########## PANEL WinOps
 DestroyModuleConfig WinOps: *
-*WinOps: Geometry 200x40-1-1
+*WinOps: Geometry 250x40-1-1
 #*WinOps: Back rgb:77/77/77
-*WinOps: Columns 4
+#*WinOps: Columns 5
 *WinOps: Rows 1
 *WinOps: Frame 1
 
@@ -51,7 +51,7 @@ DestroyModuleConfig WinOps: *
 
 ########## PANEL Internet
 DestroyModuleConfig Internet: *
-*Internet: Geometry 80x40-1-1
+*Internet: Geometry 100x40-1-1
 *Internet: Columns 2
 *Internet: Frame 1
 *Internet: (Title FFox,    Icon firefox_icon.png,	Action Exec firefox)

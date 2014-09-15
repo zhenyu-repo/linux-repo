@@ -282,6 +282,7 @@ AddToMenu MenuWallpaper
 DestroyMenu MenuFvwmTools
 AddToMenu MenuFvwmTools
 + %gimp.png%"&Gimp"			Exec gimp
++ "Gpick"				Exec gpick
 + %eclipse.png%"&Eclipse"		Exec $HOME/apps/eclipse/eclipse
 + "&DbVisualizer"			Exec $HOME/apps/DbVisualizer-8.0.10/dbvis
 + "&Meld"				Exec meld
