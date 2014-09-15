@@ -166,7 +166,8 @@ AddToMenu MenuFvwmRoot %mini.x.xpm%"Root Menu" Title
 + %firefox_icon.png%"&4. FireFox"	Exec exec firefox
 + %chromium.png%"&5. Google Chrome"	Exec exec chromium-browser
 + "&6. XNC"				Exec exec xnc
-+ %nautilus.png%"&7. Nautilus"		Exec exec nautilus --no-desktop
++ "&7. Midnight Commander"		Exec exec xterm -e mc
++ %nautilus.png%"&8. Nautilus"		Exec exec nautilus --no-desktop
 + ""					Nop
 + "&R. Misc"				Popup MenuFvwmMisc
 + "&Y. System"				Popup MenuFvwmSystem
@@ -262,7 +263,7 @@ FuncFvwmWindowCommon MenuFvwmWindowOps2
 DestroyMenu MenuFvwmMisc
 AddToMenu MenuFvwmMisc
 + "&Browse my pictures"			Exec xloadimage $HOME/Pictures/*
-+ "VLC media player"			Exec vlc
++ %vlc.png%"VLC media player"		Exec vlc
 
 # Menu System
 DestroyMenu MenuFvwmSystem
@@ -288,8 +289,8 @@ AddToMenu MenuFvwmTools
 + "&XEmacs"				Exec xemacs
 + %dia.png%"D&ia"			Exec dia
 + %gnome-planner.png%"&Planner"		Exec planner
-+ "Midnight Commander"			Exec xterm -e mc
-+ "Filezilla"				Exec filezilla
++ %filezilla.png%"Filezilla"		Exec filezilla
++ %freemind.png%"FreeMind"		Exec /z/apps/freemind/freemind.sh
 
 DestroyMenu MenuFvwmModules
 AddToMenu MenuFvwmModules "Fvwm Modules"        Title

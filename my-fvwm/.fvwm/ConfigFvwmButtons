@@ -20,7 +20,7 @@ Style FvwmButtons !Handles
 
 *FvwmButtons: (Title Snapshot,	Icon camera.png,	Action FuncCaptureWindow )
 *FvwmButtons: (Title GEdit,	Icon text-editor.png,	Action Exec gedit  )
-*FvwmButtons: (Title Lower,	Icon Down,		Action Lower )
+*FvwmButtons: (Title MC,	Icon mini.display.xpm,	Action Exec xterm -e mc )
 *FvwmButtons: (Title Raise,	Icon Up,		Action Raise )
 *FvwmButtons: (Title Kill,	Icon mini.bomb2.xpm,	Action Destroy)
 
