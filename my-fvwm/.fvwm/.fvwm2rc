@@ -262,6 +262,7 @@ FuncFvwmWindowCommon MenuFvwmWindowOps2
 DestroyMenu MenuFvwmMisc
 AddToMenu MenuFvwmMisc
 + "&Browse my pictures"			Exec xloadimage $HOME/Pictures/*
++ "VLC media player"			Exec vlc
 
 # Menu System
 DestroyMenu MenuFvwmSystem
@@ -287,6 +288,8 @@ AddToMenu MenuFvwmTools
 + "&XEmacs"				Exec xemacs
 + %dia.png%"D&ia"			Exec dia
 + %gnome-planner.png%"&Planner"		Exec planner
++ "Midnight Commander"			Exec xterm -e mc
++ "Filezilla"				Exec filezilla
 
 DestroyMenu MenuFvwmModules
 AddToMenu MenuFvwmModules "Fvwm Modules"        Title

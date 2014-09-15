@@ -4,7 +4,7 @@
 
 DestroyModuleConfig FvwmBacker: *
 *FvwmBacker: Command (Desk 0) -solid black
-*FvwmBacker: Command (Desk 1) -solid midnightblue
+*FvwmBacker: Command (Desk 1) Exec exec xloadimage -onroot ~/.fvwm/images/wallpaper.jpg
 *FvwmBacker: Command (Desk 2) -solid yellow
 *FvwmBacker: Command (Desk 3, Page 0 *) -solid black
 *FvwmBacker: Command (Desk 3, Page 1 *) -solid green

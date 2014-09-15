@@ -51,8 +51,8 @@ DestroyModuleConfig Internet: *
 *Internet: Geometry 80x40-1-1
 *Internet: Columns 2
 *Internet: Frame 1
-*Internet: (Title FFox,    Icon firefox_icon.png,    Action Exec firefox)
-*Internet: (Title Chrome,  Icon chrome.png,          Action Exec chromium-browser)
+*Internet: (Title FFox,    Icon firefox_icon.png,	Action Exec firefox)
+*Internet: (Title Chrome,  Icon chromium.png,		Action Exec chromium-browser)
 
 Module FvwmButtons
 

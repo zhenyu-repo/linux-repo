@@ -52,12 +52,14 @@ URxvt*scrollstyle:rxvt
 
 
 !!!!!!!!!!XTerm!!!!!!!!!!!
-xterm*VT100.geometry:   80x20
+xterm*VT100.geometry:   80x18
 xterm*background:       black
-xterm*boldFont:         vtbold
 xterm*cursorColor:      yellow
-xterm*font:		-*-courier-medium-r-normal-*-*-140-*-*-*-*-iso8859-1
-xterm*boldFont:		-*-courier-bold-r-normal-*-*-140-*-*-*-*-iso8859-1
+!xterm*boldFont:         vtbold
+!xterm*font:		-*-courier-medium-r-normal-*-*-120-*-*-*-*-iso8859-1
+!xterm*boldFont:	-*-courier-bold-r-normal-*-*-140-*-*-*-*-iso8859-1
+xterm*faceName: Bitstream Vera Serif Mono
+xterm*faceSize:		11
 xterm*foreground:       grey
 xterm*internalBorder:   2
 xterm*jumpScroll:       on
