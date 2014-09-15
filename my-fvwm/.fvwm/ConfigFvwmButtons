@@ -5,14 +5,15 @@ DestroyModuleConfig FvwmButtons: *
 
 Style FvwmButtons !Handles
 
-*FvwmButtons: Fore Black
-*FvwmButtons: Back rgb:90/80/90
+#*FvwmButtons: Fore Black
+#*FvwmButtons: Back rgb:90/80/90
+#*FvwmButtons: Back rgb:77/77/77
 *FvwmButtons: Geometry 50x500-135-500
 *FvwmButtons: Rows 20
 *FvwmButtons: Frame 1
 *FvwmButtons: Columns 1
 *FvwmButtons: BoxSize smart
-*FvwmButtons: Font -*-helvetica-medium-r-*-*-12-*
+#*FvwmButtons: Font -*-helvetica-medium-r-*-*-12-*
 *FvwmButtons: Padding 0 0
 
 *FvwmButtons: (Title WinOps, Icon mini.windows.xpm Panel (left, delay 0, steps 64) WinOps "Module FvwmButtons -transientpanel WinOps")
@@ -21,13 +22,13 @@ Style FvwmButtons !Handles
 *FvwmButtons: (Title Snapshot,	Icon camera.png,	Action FuncCaptureWindow )
 *FvwmButtons: (Title GEdit,	Icon text-editor.png,	Action Exec gedit  )
 *FvwmButtons: (Title MC,	Icon mini.display.xpm,	Action Exec xterm -e mc )
-*FvwmButtons: (Title Raise,	Icon Up,		Action Raise )
+*FvwmButtons: (Title Raise,	Icon mini.raise2.xpm,	Action Raise )
 *FvwmButtons: (Title Kill,	Icon mini.bomb2.xpm,	Action Destroy)
 
 *FvwmButtons: (1x1,Container(Columns 3,Frame 1))
-*FvwmButtons: (Title Dopey ,Action  `Exec "big_win" xterm -T big_win -geometry 80x50 &`)
-*FvwmButtons: (Title Snoopy, Font fixed, Action `Exec "small_win" xterm -T small_win &`)
-*FvwmButtons: (Title google-chrome)
+*FvwmButtons: (Title 1 ,Action  `Exec "big_win" xterm -T big_win -geometry 80x50 &`)
+*FvwmButtons: (Title 2, Font fixed, Action `Exec "small_win" xterm -T small_win &`)
+*FvwmButtons: (Title 3, Action Exec display ~/snapshot*)
 *FvwmButtons: (End)
 
 *FvwmButtons: (Title Xcalc, Icon mini.calc.xpm, Action `Exec "Calculator" xcalc &`)
@@ -37,6 +38,7 @@ Style FvwmButtons !Handles
 ########## PANEL WinOps
 DestroyModuleConfig WinOps: *
 *WinOps: Geometry 200x40-1-1
+#*WinOps: Back rgb:77/77/77
 *WinOps: Columns 4
 *WinOps: Rows 1
 *WinOps: Frame 1
@@ -45,6 +47,7 @@ DestroyModuleConfig WinOps: *
 *WinOps: (Title Move,	Icon mini.move2.xpm, 		Action Move  )
 *WinOps: (Title Lower,	Icon mini.lower2.xpm,		Action Lower )
 *WinOps: (Title Raise,  Icon mini.raise2.xpm,		Action Raise )
+*WinOps: (Title Kill,	Icon mini.bomb2.xpm,		Action Destroy)
 
 ########## PANEL Internet
 DestroyModuleConfig Internet: *
