@@ -165,12 +165,11 @@ AddToMenu MenuFvwmRoot %mini.x.xpm%"Root Menu" Title
 + %gterm.png%"&3. GTerm"		Exec exec gnome-terminal
 + %firefox_icon.png%"&4. FireFox"	Exec exec firefox
 + %chromium.png%"&5. Google Chrome"	Exec exec chromium-browser
-+ "&6. XNC"				Exec exec xnc
-+ "&7. Midnight Commander"		Exec exec xterm -e mc
-+ %nautilus.png%"&8. Nautilus"		Exec exec nautilus --no-desktop
++ "&6. File Manager"			Popup MenuFileManager
 + ""					Nop
 + "&R. Misc"				Popup MenuFvwmMisc
 + "&Y. System"				Popup MenuFvwmSystem
++ "&I. Image"				Popup MenuImage
 + "&T. Tools"				Popup MenuFvwmTools
 + "&U. Utilities"			Popup MenuFvwmUtilities
 + ""					Nop
@@ -184,6 +183,22 @@ AddToMenu MenuFvwmRoot %mini.x.xpm%"Root Menu" Title
 + ""					Nop
 + %exit.png%"&X. Exit Fvwm" 		Popup MenuFvwmQuitVerify
 
+DestroyMenu MenuImage
+AddToMenu MenuImage
++ %gimp.png%"&Gimp"			Exec gimp
++ %imagemagick.png%"&I. ImageMagick"	Popup MenuImageMagick
++ "Gpick"				Exec gpick
++ "Image Viewer"			Exec eog
++ "gThumb"				Exec gthumb
++ "GPicView"				Exec gpicview
+
+DestroyMenu MenuFileManager
+AddToMenu MenuFileManager
++ "XNC"					Exec exec xnc
++ "Midnight Commander"			Exec exec xterm -e mc
++ %nautilus.png%"Nautilus"		Exec exec nautilus --no-desktop
++ "X File Explorer"			Exec exec xfe
+
 DestroyMenu MenuFvwmUtilities
 AddToMenu MenuFvwmUtilities "Utilities" Title
 + "&T. Top"				Exec exec xterm -T Top -n Top -e top
@@ -193,7 +208,6 @@ AddToMenu MenuFvwmUtilities "Utilities" Title
 + "&R. Editres"				Exec exec editres
 + ""					Nop
 + "&E. GNU Emacs"			Exec exec emacs
-+ %imagemagick.png%"&I. ImageMagick"	Popup MenuImageMagick
 + ""					Nop
 + "&D. Reset X defaults" 		Exec xrdb -load $HOME/.Xdefaults
 + "&P. xprop"				Exec exec xmessage "`xprop`"
@@ -281,8 +295,6 @@ AddToMenu MenuWallpaper
 # Menu Tools
 DestroyMenu MenuFvwmTools
 AddToMenu MenuFvwmTools
-+ %gimp.png%"&Gimp"			Exec gimp
-+ "Gpick"				Exec gpick
 + %eclipse.png%"&Eclipse"		Exec $HOME/apps/eclipse/eclipse
 + "&DbVisualizer"			Exec $HOME/apps/DbVisualizer-8.0.10/dbvis
 + "&Meld"				Exec meld
@@ -292,6 +304,7 @@ AddToMenu MenuFvwmTools
 + %gnome-planner.png%"&Planner"		Exec planner
 + %filezilla.png%"Filezilla"		Exec filezilla
 + %freemind.png%"FreeMind"		Exec /z/apps/freemind/freemind.sh
++ "Document Viewer"			Exec evince
 
 DestroyMenu MenuFvwmModules
 AddToMenu MenuFvwmModules "Fvwm Modules"        Title
