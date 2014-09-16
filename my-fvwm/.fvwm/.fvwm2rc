@@ -88,6 +88,7 @@ Style Firefox-bin	Icon firefox.png, ClickToFocus
 Style xmosaic		Color Green/Yellow, ClickToFocus
 Style gnome-terminal	TitleAtLeft
 Style Firefox		TitleAtLeft
+Style xeyes		NoTitle
 
 # Close button and event handler on Window title bar
 ButtonStyle 6	17 	20x20@1 30x20@1 50x40@1 70x20@1 80x20@1 80x30@0 60x50@0 80x70@1\
@@ -105,7 +106,7 @@ Style * SnapAttraction 15
 # Key Bindings
 ######################################
 #Key F1		A	N	Iconify		# Press F1 to minimize the window
-#Key F2		A	N	RaiseLower	# Press F2 to change the Z-index of the window
+Key F8		A	N	RaiseLower	# Press F8 to change the Z-index of the window
 Key F4		A	M	Close		# Press alt+F4 to close the window
 Key F11		A	N	Maximize	# Press F11 to maximize the window
 
@@ -278,6 +279,7 @@ DestroyMenu MenuFvwmMisc
 AddToMenu MenuFvwmMisc
 + "&Browse my pictures"			Exec xloadimage $HOME/Pictures/*
 + %vlc.png%"VLC media player"		Exec vlc
++ %mini.eyes.xpm%"XEyes"				Exec xeyes
 
 # Menu System
 DestroyMenu MenuFvwmSystem
@@ -285,6 +287,7 @@ AddToMenu MenuFvwmSystem
 + "&Reset background to black"		Exec xsetroot -solid black
 + "&Change wallpaper"			Popup MenuWallpaper
 + %audio-volume.png%"&AlsaMixer"	Exec xterm -e alsamixer
++ "&Xfontsel"				Exec xfontsel
 
 # Menu Wallpaper
 DestroyMenu MenuWallpaper
