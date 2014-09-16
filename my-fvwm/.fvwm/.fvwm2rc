@@ -104,7 +104,7 @@ Style * SnapAttraction 15
 ######################################
 # Key Bindings
 ######################################
-Key F1		A	N	Iconify		# Press F1 to minimize the window
+#Key F1		A	N	Iconify		# Press F1 to minimize the window
 #Key F2		A	N	RaiseLower	# Press F2 to change the Z-index of the window
 Key F4		A	M	Close		# Press alt+F4 to close the window
 Key F11		A	N	Maximize	# Press F11 to maximize the window
