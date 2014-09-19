@@ -298,7 +298,7 @@ AddToMenu MenuWallpaper
 # Menu Tools
 DestroyMenu MenuFvwmTools
 AddToMenu MenuFvwmTools
-+ %eclipse.png%"&Eclipse"		Exec $HOME/apps/eclipse/eclipse
++ %eclipse.png%"&Eclipse"		Exec /z/apps/eclipse/eclipse
 + "&DbVisualizer"			Exec $HOME/apps/DbVisualizer-8.0.10/dbvis
 + "&Meld"				Exec meld
 + %emacs-2.png%"&GNU Emacs"		Exec emacs
