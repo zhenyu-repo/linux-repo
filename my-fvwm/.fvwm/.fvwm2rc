@@ -16,6 +16,7 @@
 
 SetEnv FVWM_IMG_PATH $[HOME]/.fvwm/images
 SetEnv WALLPAPER /z/wallpapers
+SetEnv APP_REPO /z/apps
 
 # Icon and Image Path
 ImagePath +:$HOME/.fvwm/decors/newdecors
@@ -299,7 +300,7 @@ AddToMenu MenuWallpaper
 # Menu Tools
 DestroyMenu MenuFvwmTools
 AddToMenu MenuFvwmTools
-+ %eclipse.png%"&Eclipse"		Exec /z/apps/eclipse/eclipse
++ %eclipse.png%"&Eclipse"		Exec $APP_REPO/eclipse/eclipse
 + "&DbVisualizer"			Exec $HOME/apps/DbVisualizer-8.0.10/dbvis
 + "&Meld"				Exec meld
 + %emacs-2.png%"&GNU Emacs"		Exec emacs
@@ -307,10 +308,11 @@ AddToMenu MenuFvwmTools
 + %dia.png%"D&ia"			Exec dia
 + %gnome-planner.png%"&Planner"		Exec planner
 + %filezilla.png%"Filezilla"		Exec filezilla
-+ %freemind.png%"FreeMind"		Exec /z/apps/freemind/freemind.sh
++ %freemind.png%"FreeMind"		Exec $APP_REPO/freemind/freemind.sh
 + "Document Viewer"			Exec evince
-+ "KDF Viewer"				Exec $HOME/bin/kdfviewer.sh
 + "XML Copy Editor"			Exec xmlcopyeditor
++ "KDF Viewer"				Exec $HOME/bin/kdfviewer.sh
++ "ULSD Query"				Exec java -jar $APP_REPO/ulsdgui.jar
 
 DestroyMenu MenuFvwmModules
 AddToMenu MenuFvwmModules "Fvwm Modules"        Title
