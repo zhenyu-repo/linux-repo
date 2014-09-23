@@ -280,6 +280,7 @@ AddToMenu MenuFvwmMisc
 + "&Browse my pictures"			Exec xloadimage $HOME/Pictures/*
 + %vlc.png%"VLC media player"		Exec vlc
 + %mini.eyes.xpm%"XEyes"		Exec xeyes
++ "Music on Console"			Exec xterm -e mocp
 
 # Menu System
 DestroyMenu MenuFvwmSystem
@@ -309,6 +310,7 @@ AddToMenu MenuFvwmTools
 + %freemind.png%"FreeMind"		Exec /z/apps/freemind/freemind.sh
 + "Document Viewer"			Exec evince
 + "KDF Viewer"				Exec $HOME/bin/kdfviewer.sh
++ "XML Copy Editor"			Exec xmlcopyeditor
 
 DestroyMenu MenuFvwmModules
 AddToMenu MenuFvwmModules "Fvwm Modules"        Title
