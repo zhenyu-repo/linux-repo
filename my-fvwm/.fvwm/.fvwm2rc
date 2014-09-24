@@ -111,8 +111,8 @@ Key F8		A	N	RaiseLower	# Press F8 to change the Z-index of the window
 Key F4		A	M	Close		# Press alt+F4 to close the window
 Key F11		A	N	Maximize	# Press F11 to maximize the window
 
-Key Next	A       SCM     Next [*] Focus
-Key Prior	A       SCM     Prev [*] Focus
+Key Next	A	SCM	Next [*] Focus
+Key Prior	A	SCM	Prev [*] Focus
 
 # Iconify all windows, Windows key on Windows OS
 Key Super_L	A	A	All (AcceptsFocus CurrentPage !Iconic !Shaded !FvwmTaskBar) Iconify
@@ -132,7 +132,7 @@ Key F2 A M GotoDesk 1		# Press Meta+F2 to switch to next desk, Meta=ALT on Windo
 #*FvwmAnimate: Iterations 8
 #*FvwmAnimate: Color Blue
 
-################# Initialization Functions #######################
+# StartFunction will be called each time Fvwm starts or restart
 AddToFunc StartFunction
 # 自动隐藏Pager
 + I Module FvwmAuto FvwmAutohide -menter FuncAutoEnter
@@ -148,8 +148,10 @@ AddToFunc StartFunction
 # Load wallpaper
 #+ I Exec exec xloadimage -onroot -fullscreen ~/.fvwm/images/wallpaper.jpg
 
+# InitFunction will be called only one time
 AddToFunc InitFunction
-#+ I exec xsetroot -mod 2 2 -fg rgb:55/40/55 -bg rgb:70/50/70
++ I exec xscreensaver -no-splash&
++ I exec xrdb ~/.Xdefaults
 + I exec xsetroot -mod 2 2 -fg black -bg black
 + I exec xclock -d -fg red -bg black -update 1 -strftime  %H:%M:%S  -geometry 60x30-250-30 -norender -padding 1
 
@@ -282,6 +284,7 @@ AddToMenu MenuFvwmMisc
 + %vlc.png%"VLC media player"		Exec vlc
 + %mini.eyes.xpm%"XEyes"		Exec xeyes
 + "Music on Console"			Exec xterm -e mocp
++ "Transmission"			Exec transmission-gtk
 
 # Menu System
 DestroyMenu MenuFvwmSystem
