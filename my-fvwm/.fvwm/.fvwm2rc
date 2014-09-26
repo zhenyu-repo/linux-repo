@@ -88,7 +88,7 @@ Style xmag		Icon mag_glass.xpm, ClickToFocus
 Style Firefox-bin	Icon firefox.png, ClickToFocus
 Style xmosaic		Color Green/Yellow, ClickToFocus
 Style gnome-terminal	TitleAtLeft
-Style Firefox		TitleAtLeft
+Style Firefox		TitleAtRight
 Style xeyes		NoTitle
 
 # Close button and event handler on Window title bar
@@ -285,6 +285,7 @@ AddToMenu MenuFvwmMisc
 + %mini.eyes.xpm%"XEyes"		Exec xeyes
 + "Music on Console"			Exec xterm -e mocp
 + "Transmission"			Exec transmission-gtk
++ "XPad"				Exec xpad
 
 # Menu System
 DestroyMenu MenuFvwmSystem
@@ -314,6 +315,7 @@ AddToMenu MenuFvwmTools
 + %freemind.png%"FreeMind"		Exec $APP_REPO/freemind/freemind.sh
 + "Document Viewer"			Exec evince
 + "XML Copy Editor"			Exec xmlcopyeditor
++ "MySQL Workbench"			Exec mysql-workbench
 + "KDF Viewer"				Exec $HOME/bin/kdfviewer.sh
 + "ULSD Query"				Exec java -jar $APP_REPO/ulsdgui.jar
 
