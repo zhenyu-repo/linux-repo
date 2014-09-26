@@ -306,6 +306,8 @@ DestroyMenu MenuFvwmTools
 AddToMenu MenuFvwmTools
 + %eclipse.png%"&Eclipse"		Exec $APP_REPO/eclipse/eclipse
 + "&DbVisualizer"			Exec $HOME/apps/DbVisualizer-8.0.10/dbvis
++ "MySQL Workbench"			Exec mysql-workbench
++ "SQLiteMan"				Exec sqliteman
 + "&Meld"				Exec meld
 + %emacs-2.png%"&GNU Emacs"		Exec emacs
 + "&XEmacs"				Exec xemacs
@@ -315,7 +317,6 @@ AddToMenu MenuFvwmTools
 + %freemind.png%"FreeMind"		Exec $APP_REPO/freemind/freemind.sh
 + "Document Viewer"			Exec evince
 + "XML Copy Editor"			Exec xmlcopyeditor
-+ "MySQL Workbench"			Exec mysql-workbench
 + "KDF Viewer"				Exec $HOME/bin/kdfviewer.sh
 + "ULSD Query"				Exec java -jar $APP_REPO/ulsdgui.jar
 
