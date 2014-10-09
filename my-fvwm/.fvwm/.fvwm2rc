@@ -222,7 +222,7 @@ DestroyMenu MenuImageMagick
 AddToMenu MenuImageMagick
 + "&R Capture Region"			Exec import `date +snapshot-%Y-%m-%dT%H%M%S.jpg`
 + "&W Capture Window"			FuncCaptureWindow
-+ "&F Capture Fullscreen"		Exec import -window root `date +snapshot-%Y-%m-%dT%H%M%S.jpg`
++ "&F Capture Fullscreen"		Exec sleep 5; import -window root `date +snapshot-%Y-%m-%dT%H%M%S.jpg`
 
 DestroyMenu MenuFvwmConfig
 AddToMenu MenuFvwmConfig "Fvwm Config Ops" Title
@@ -474,10 +474,10 @@ AddToFunc FuncFvwmMoveOrRaise
 
 DestroyFunc FuncFvwmMaximize
 AddToFunc FuncFvwmMaximize
-+ M Maximize   0 100
-+ H Maximize   0 100
-+ C Maximize   0  80
-+ D Maximize 100 100
++ M Maximize   0 100	# Motion to maximize the window to fill 100% of the screen vertically
++ H Maximize   0 100	# Hold to maximize the window to fill 100% of the screen vertically
++ C Maximize   0  80	# Single click to maximize the window to fill 80% of the screen vertically
++ D Maximize 100 100	# Double click to maximize the window to fill 100% of the screen both horizontally and vertically
 
 DestroyFunc FuncFvwmMoveOrIconify
 AddToFunc FuncFvwmMoveOrIconify
