@@ -1,0 +1,6 @@
+
+hislog() { history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn ; }
+alias install='sudo apt-fast install'
+
+alias demo-pv='echo "You can simulate on-screen typing just like in the movies" | pv -qL 10'
+
