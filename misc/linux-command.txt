@@ -1,0 +1,7 @@
+
+$watch -n 1 mysqladmin --user=<user> --password=<password> processlist
+Monitor the queries being run by MySQL
+
+$cat ~/.ssh/id_rsa.pub | ssh user@machine "mkdir ~/.ssh; cat >> ~/.ssh/authorized_keys"
+Copy your ssh public key to a server from a machine that doesn't have ssh-copy-id
+
