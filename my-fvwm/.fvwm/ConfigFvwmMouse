@@ -2,9 +2,17 @@
 CursorStyle root top_left_arrow
 CursorStyle stroke hand2
 
-# some simple default mouse bindings:
+# Bindings are set up as follows, you can either bind a key to an action by 'Key X Context Modifier Action'
+# or bind the mouse to an action 'Mouse X Context Modifier Action'. Context is where the mouse is currently
+# located (as shown above) and the Modifier is any combination of the following:
+# (A)ny, (C)ontrol, (S)hift, (M)eta, (N)othing, or 1-5, representing the X Modifiers mod1-mod5 (man xmodmap).
 
-# for the root window:
+# Title bar and 0-9 buttons
+# 1 3 5 7 9           T           T           T        0 8 6 4 2
+
+# Some simple default mouse bindings:
+
+# For the root window:
 Mouse 1 R       A       Menu MenuFvwmRoot Nop
 
 # Press Alt and left click window, then you can move the window
