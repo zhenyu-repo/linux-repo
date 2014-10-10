@@ -12,6 +12,19 @@ CursorStyle stroke hand2
 
 # Some simple default mouse bindings:
 
+# Mouse Button Context Modifiers Function
+# Button: 1- Left click, 2 - Middle click, 3 - Right click
+# If Button is zero then any button performs the specified function.
+# Context: 
+# R for root window,
+# W for an application window, 
+# D for a desktop application(e.g: Nautilus desktop)
+# T for a window title bar
+# S for a window side, top or bottom bar
+# [, ], -, _ for the left, right, top or bottom side only
+# F for a window frame
+# I for an icon window
+# 
 # For the root window:
 Mouse 1 R       A       Menu MenuFvwmRoot Nop
 
@@ -20,15 +33,20 @@ Mouse 1 W       M       Move
 
 # Press Alt and right click window to close it
 Mouse 3 W       M       Close
+
+# Middle click on root window to pop up Window ops menu
 Mouse 2 R       A       Menu MenuFvwmWindowOps Nop
+
+# Right click on root window to pop up window list
 Mouse 3 R       A       WindowList
 
-# for the title bar buttons:
+# For the title bar buttons:
+# If Button is zero then any button performs the specified function.
 Mouse 0 1       A       Menu MenuFvwmWindowOps2 Close
 Mouse 0 2       A       FuncFvwmMaximize
 Mouse 0 4       A       Iconify
 
-# for other parts of the window/borders/icons:
+# For other parts of the window/borders/icons:
 Mouse 1 F       A       FuncFvwmResizeOrRaise
 Mouse 1 TS      A       FuncFvwmMoveOrRaise
 Mouse 1 I       A       FuncFvwmMoveOrIconify
