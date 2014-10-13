@@ -8,6 +8,7 @@ alias find-duplicate-files='find -not -empty -type f -printf "%s\n" | sort -rn |
 alias rm='rm -i'
 alias share-over-http='nc -v -l 8888 < '
 alias ssh-copy-id=ssh-copy-id
+alias tf='tail -f'
 alias zmem-usage='ps aux | sort -nk +4 | tail'
 alias zclock='while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-29));date;tput rc;done &'
 
