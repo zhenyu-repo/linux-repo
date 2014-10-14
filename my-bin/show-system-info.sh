@@ -18,7 +18,7 @@ echo "OS Type:=$OS_TYPE"
 echo "Hostname:=$HOSTNAME"
 echo "CPU Vendor:=$CPU_VENDOR"
 echo "CPU Model:=$CPU_MODEL"
-echo "CPU Speed:=$CPU_MHZ"
+echo "CPU Speed(single Core):=$CPU_MHZ"
 echo "Memory:=$MEM"
 echo "Time Zone:=$TIME_ZONE"
 
