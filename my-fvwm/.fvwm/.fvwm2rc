@@ -275,7 +275,7 @@ FuncFvwmWindowCommon MenuFvwmWindowOps2
 + Scroll&Bar		Module FvwmScroll 2 2
 + &Print		FuncFvwmPrint
 + "Print Re&verse"	FuncFvwmPrintReverse
-
++ "Identify"		Module FvwmIdent
 
 # Menu Misc
 DestroyMenu MenuFvwmMisc
