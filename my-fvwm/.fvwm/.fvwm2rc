@@ -195,6 +195,7 @@ AddToMenu MenuImage
 + "Image Viewer"			Exec eog
 + "gThumb"				Exec gthumb
 + "GPicView"				Exec gpicview
++ "Shotwell"				Exec shotwell
 
 DestroyMenu MenuFileManager
 AddToMenu MenuFileManager
