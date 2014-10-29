@@ -306,6 +306,7 @@ AddToMenu MenuWallpaper
 DestroyMenu MenuFvwmTools
 AddToMenu MenuFvwmTools
 + %eclipse.png%"&Eclipse"		Exec $APP_REPO/eclipse/eclipse
++ %geany.png%"&Geany"			Exec geany
 + "&DbVisualizer"			Exec $HOME/apps/DbVisualizer-8.0.10/dbvis
 + "MySQL Workbench"			Exec mysql-workbench
 + "SQLiteMan"				Exec sqliteman
