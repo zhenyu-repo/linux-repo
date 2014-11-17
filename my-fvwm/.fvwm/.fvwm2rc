@@ -209,6 +209,7 @@ AddToMenu MenuFvwmUtilities "Utilities" Title
 + "&T. Top"				Exec exec xterm -T Top -n Top -e top
 + %mini.calc.xpm%"&C. Calculator" 	Exec exec xcalc
 + %mini.clock.xpm%"&K. Clock"		Exec exec xclock -norender -digital -update 1 -geometry 240x40-0+0  -fg green -bg black
++ "&R. Cairo-Clock"			Exec exec cairo-clock
 + "&G. Xmag"				Exec exec xmag
 + "&R. Editres"				Exec exec editres
 + ""					Nop
