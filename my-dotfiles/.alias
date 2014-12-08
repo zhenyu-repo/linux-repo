@@ -3,7 +3,7 @@ cmdfu() { curl "http://www.commandlinefu.com/commands/matching/$@/$(echo -n $@ |
 hislog() { history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn ; }
 
 alias install='sudo apt-fast install'
-alias upgrade='sudo apt-fast upgrade --yes'
+#alias upgrade='sudo apt-fast upgrade --yes'
 alias internet-usage='lsof -P -i -n | cut -f 1 -d " "| uniq | tail -n +2'
 alias find-duplicate-files='find -not -empty -type f -printf "%s\n" | sort -rn | uniq -d | xargs -I{} -n1 find -type f -size {}c -print0 | xargs -0 md5sum | sort | uniq -w32 --all-repeated=separate'
 alias rm='rm -i'
