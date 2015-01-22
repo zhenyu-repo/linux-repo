@@ -88,7 +88,6 @@ Style xmag		Icon mag_glass.xpm, ClickToFocus
 Style Firefox-bin	Icon firefox.png, ClickToFocus
 Style xmosaic		Color Green/Yellow, ClickToFocus
 Style gnome-terminal	TitleAtLeft
-Style Firefox		TitleAtRight
 Style xeyes		NoTitle
 
 # Close button and event handler on Window title bar
